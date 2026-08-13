@@ -1,0 +1,18 @@
+check,project_a_expected,project_b_observed,difference,status,evidence_basis
+clean_equity_rows,50300.0,50300.0,0.0,pass,frozen target from student's final Project A outputs
+clean_crypto_rows,14610.0,14610.0,0.0,pass,frozen target from student's final Project A outputs
+clean_news_rows,146836.0,146836.0,0.0,pass,frozen target from student's final Project A outputs
+crypto_rows_removed,10.0,10.0,0.0,pass,frozen target from student's final Project A outputs
+news_exact_duplicates_removed,2847.0,2847.0,0.0,pass,frozen target from student's final Project A outputs
+publisher_missing,137447.0,137447.0,0.0,pass,frozen target from student's final Project A outputs
+equity_valid_returns,50250.0,50250.0,0.0,pass,frozen target from student's final Project A outputs
+crypto_valid_returns,14600.0,14600.0,0.0,pass,frozen target from student's final Project A outputs
+combined_equity_dates,1006.0,1006.0,0.0,pass,frozen target from student's final Project A outputs
+ticker_day_rows,50300.0,50300.0,0.0,pass,frozen target from student's final Project A outputs
+sector_day_rows,10060.0,10060.0,0.0,pass,frozen target from student's final Project A outputs
+aligned_same_day,134279.0,134279.0,0.0,pass,frozen target from student's final Project A outputs
+aligned_next_day,12551.0,12551.0,0.0,pass,frozen target from student's final Project A outputs
+aligned_after_last,6.0,6.0,0.0,pass,frozen target from student's final Project A outputs
+aligned_headlines_in_panels,146830.0,146830.0,0.0,pass,frozen target from student's final Project A outputs
+nvda_2020_01_03_return,-0.01600591028787468,-0.01600591028787468,0.0,pass,frozen target from student's final Project A outputs
+btc_2020_01_02_return,-0.029819292162590716,-0.029819292162590716,0.0,pass,frozen target from student's final Project A outputs

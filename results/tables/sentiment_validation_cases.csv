@@ -1,0 +1,21 @@
+headline_date,aligned_trading_date,ticker,sector,title,plain_compound,finance_compound,finance_score_change,plain_label,finance_label,ai_expected_direction,student_expected_direction,student_review_status
+2020-02-27,2020-02-27,TMUS,Comm,"Federal Communications Commission Set To Proposed Fines For Four US Carriers That Could Top $200M In Total Over Alleged Unauthorized Sale Of Real-Time Location Data From Users; Proposed Fines On AT&T, T-Mobile, Verizon And Sprint",0.2023,-0.5859,-0.7882,positive,negative,negative,,review required
+2020-05-07,2020-05-07,CMCSA,Comm,Roku Stock Will Keep Putting a Beating on Cable Competitors,-0.4588,0.4696,0.9284,negative,positive,positive,,review required
+2023-07-24,2023-07-24,WMT,Consumer,AMC Stock: AMC Entertainment Just Inched Closer to Bankruptcy,0.4215,-0.3999,-0.8213999999999999,positive,negative,negative,,review required
+2023-08-05,2023-08-07,KO,Consumer,74% of Warren Buffett's Portfolio Is in 5 Stocks -- but Only This 1 Is Beating the Market,-0.6124,0.6237,1.2361,negative,positive,positive,,review required
+2020-03-12,2020-03-12,OXY,Energy,Credit Suisse Downgrades Occidental Petroleum to Underperform,0.3818,-0.5789,-0.9606999999999999,positive,negative,negative,,review required
+2023-08-05,2023-08-07,CVX,Energy,74% of Warren Buffett's Portfolio Is in 5 Stocks -- but Only This 1 Is Beating the Market,-0.6124,0.6237,1.2361,negative,positive,positive,,review required
+2023-03-13,2023-03-13,GS,Financials,Hedge funds stand to lap up bearish profits from bank stock rout,0.4404,-0.5789,-1.0192999999999999,positive,negative,negative,,review required
+2021-07-01,2021-07-01,MS,Financials,This Undiscovered Company Is Beating Investment Banks at Their Own Game,-0.4588,0.4696,0.9284,negative,positive,positive,,review required
+2020-01-31,2020-01-31,AMGN,Healthcare,Amgen shares are trading lower after the company on Thursday issued FY20 EPS guidance below estimates. Baird analysts today downgraded the company's stock from Neutral to Underperform.,0.0,-0.7469,-0.7469,neutral,negative,negative,,review required
+2020-04-30,2020-04-30,GILD,Healthcare,5 Small-Cap ETFs Beating S&P 500 in April,-0.4588,0.4696,0.9284,negative,positive,positive,,review required
+2020-04-27,2020-04-27,CAT,Industrials,"UPDATE: Morgan Stanley Downgrades Caterpillar And United Rentals As Firm Sees 'growing headwinds from a multi-year downturn in Non-Resi Construction, combined with historically weak oil prices and declining mining commodity price'",0.1531,-0.7918,-0.9449,positive,negative,negative,,review required
+2021-05-15,2021-05-17,UPS,Industrials,This Is the Secret to Beating the Stock Market,-0.4588,0.4696,0.9284,negative,positive,positive,,review required
+2020-05-04,2020-05-04,DOW,Materials,"B of A Securities Downgrades Dow to Underperform, Announces $37 Price Target",0.296,-0.631,-0.927,positive,negative,negative,,review required
+2021-04-08,2021-04-08,NUE,Materials,2 Value Stocks That Are Beating the Market,-0.1531,0.6662,0.8193,negative,positive,positive,,review required
+2022-09-17,2022-09-19,O,RealEstate,3 Top Stocks to Buy During a Market Sell-Off,0.2023,-0.34,-0.5423,positive,negative,negative,,review required
+2023-06-16,2023-06-16,O,RealEstate,3 Dividend Aristocrat Stocks Beating Their Average Sector Yield,-0.4588,0.4696,0.9284,negative,positive,positive,,review required
+2020-04-14,2020-04-14,INTC,Tech,"Stocks Pointing To Higher Opening, But Bearish Pattern's Persist",0.0,-0.6747,-0.6747,neutral,negative,negative,,review required
+2021-04-28,2021-04-28,QCOM,Tech,Qualcomm Surges 6% in After-Hours Trading After Beating Estimates,-0.4588,0.4696,0.9284,negative,positive,positive,,review required
+2020-01-16,2020-01-16,NEE,Utilities,"Goldman Sachs Downgrades NextEra Energy to Neutral, Announces $256 Price Target",0.2732,-0.296,-0.5691999999999999,positive,negative,negative,,review required
+2020-10-22,2020-10-22,D,Utilities,5 Value Stocks To Buy Now Beating The S&P 500 In 2020,-0.1531,0.6662,0.8193,negative,positive,positive,,review required

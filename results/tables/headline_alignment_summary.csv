@@ -1,0 +1,4 @@
+alignment_status,headline_count,headline_share_pct,treatment
+same_trading_day,134279,91.44828243754938,included on original date
+next_trading_day,12551,8.54763137105342,included on next observed equity trading date
+after_last_equity_date_unaligned,6,0.004086191397205045,excluded from trading-day features; retained in alignment audit

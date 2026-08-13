@@ -1,0 +1,341 @@
+review_round,reviewer_id,reviewer_role,canonical_family,score,review_was_blind,weight_in_mean
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,bankruptcy,-3.4,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,bearish,-2.3,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,beat,1.8,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,bullish,2.3,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,buyback,1.3,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,default,-3.0,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,downgrade,-2.2,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,impairment,-2.0,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,insolvency,-3.3,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,layoff,-2.3,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,miss,-1.8,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,outperform,1.8,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,underperform,-1.8,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,upgrade,2.1,True,0.1
+initial_compact_lexicon,reviewer_01,financial-news NLP reviewer,writedown,-2.2,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,bankruptcy,-3.5,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,bearish,-2.3,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,beat,2.0,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,bullish,2.3,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,buyback,1.4,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,default,-3.2,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,downgrade,-2.3,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,impairment,-2.1,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,insolvency,-3.4,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,layoff,-2.0,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,miss,-2.0,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,outperform,2.1,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,underperform,-2.1,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,upgrade,2.2,True,0.1
+initial_compact_lexicon,reviewer_02,equity research analyst,writedown,-2.2,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,bankruptcy,-3.6,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,bearish,-2.5,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,beat,2.1,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,bullish,2.5,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,buyback,1.5,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,default,-3.2,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,downgrade,-2.4,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,impairment,-2.0,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,insolvency,-3.5,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,layoff,-2.1,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,miss,-2.1,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,outperform,2.0,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,underperform,-2.0,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,upgrade,2.3,True,0.1
+initial_compact_lexicon,reviewer_03,model-risk reviewer,writedown,-2.3,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,bankruptcy,-3.5,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,bearish,-2.5,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,beat,2.2,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,bullish,2.5,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,buyback,1.4,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,default,-3.1,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,downgrade,-2.4,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,impairment,-2.1,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,insolvency,-3.4,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,layoff,-2.0,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,miss,-2.2,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,outperform,2.3,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,underperform,-2.3,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,upgrade,2.4,True,0.1
+initial_compact_lexicon,reviewer_04,portfolio manager,writedown,-2.2,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,bankruptcy,-3.5,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,bearish,-2.5,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,beat,2.4,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,bullish,2.5,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,buyback,1.4,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,default,-3.3,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,downgrade,-2.5,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,impairment,-2.2,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,insolvency,-3.5,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,layoff,-2.3,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,miss,-2.4,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,outperform,2.1,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,underperform,-2.1,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,upgrade,2.3,True,0.1
+initial_compact_lexicon,reviewer_05,computational linguist,writedown,-2.4,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,bankruptcy,-3.6,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,bearish,-2.3,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,beat,2.1,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,bullish,2.3,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,buyback,1.3,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,default,-3.4,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,downgrade,-2.3,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,impairment,-2.1,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,insolvency,-3.5,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,layoff,-1.8,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,miss,-2.1,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,outperform,1.9,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,underperform,-1.9,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,upgrade,2.2,True,0.1
+initial_compact_lexicon,reviewer_06,financial sentiment validation specialist,writedown,-2.2,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,bankruptcy,-3.5,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,bearish,-2.3,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,beat,2.2,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,bullish,2.3,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,buyback,1.2,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,default,-3.2,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,downgrade,-2.4,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,impairment,-2.0,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,insolvency,-3.4,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,layoff,-2.1,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,miss,-2.1,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,outperform,2.1,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,underperform,-2.2,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,upgrade,2.3,True,0.1
+initial_compact_lexicon,reviewer_07,financial disclosure analyst,writedown,-2.2,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,bankruptcy,-3.4,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,bearish,-2.4,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,beat,1.9,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,bullish,2.4,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,buyback,1.1,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,default,-3.1,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,downgrade,-2.1,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,impairment,-2.0,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,insolvency,-3.3,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,layoff,-2.0,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,miss,-1.9,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,outperform,2.2,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,underperform,-2.2,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,upgrade,2.1,True,0.1
+initial_compact_lexicon,reviewer_08,context-ambiguity NLP auditor,writedown,-2.1,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,bankruptcy,-3.5,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,bearish,-2.4,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,beat,2.1,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,bullish,2.4,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,buyback,1.4,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,default,-3.3,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,downgrade,-2.4,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,impairment,-2.2,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,insolvency,-3.4,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,layoff,-2.0,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,miss,-2.1,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,outperform,2.2,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,underperform,-2.2,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,upgrade,2.3,True,0.1
+initial_compact_lexicon,reviewer_09,credit and equity market analyst,writedown,-2.3,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,bankruptcy,-3.4,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,bearish,-2.1,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,beat,1.8,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,bullish,2.1,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,buyback,1.2,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,default,-3.0,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,downgrade,-2.0,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,impairment,-1.8,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,insolvency,-3.2,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,layoff,-2.1,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,miss,-1.8,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,outperform,1.7,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,underperform,-1.7,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,upgrade,2.0,True,0.1
+initial_compact_lexicon,reviewer_10,conservative validation reviewer,writedown,-2.0,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,antitrust,-1.3,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,blowout,2.3,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,breach,-2.0,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,contraction,-1.5,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,delist,-2.3,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,downturn,-1.8,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,fine_penalty,-1.8,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,headwind,-1.5,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,outage,-2.0,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,outperforming,2.1,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,overvalued,-1.5,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,rebound,1.7,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,recall,-1.7,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,rout,-2.4,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,selloff,-2.2,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,slowdown,-1.6,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,slump,-2.0,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,surpass,2.0,True,0.1
+researched_expansion,reviewer_01,financial-news NLP reviewer,upside,1.8,True,0.1
+researched_expansion,reviewer_02,equity research analyst,antitrust,-1.4,True,0.1
+researched_expansion,reviewer_02,equity research analyst,blowout,2.5,True,0.1
+researched_expansion,reviewer_02,equity research analyst,breach,-2.1,True,0.1
+researched_expansion,reviewer_02,equity research analyst,contraction,-1.8,True,0.1
+researched_expansion,reviewer_02,equity research analyst,delist,-2.4,True,0.1
+researched_expansion,reviewer_02,equity research analyst,downturn,-2.0,True,0.1
+researched_expansion,reviewer_02,equity research analyst,fine_penalty,-1.8,True,0.1
+researched_expansion,reviewer_02,equity research analyst,headwind,-1.5,True,0.1
+researched_expansion,reviewer_02,equity research analyst,outage,-2.0,True,0.1
+researched_expansion,reviewer_02,equity research analyst,outperforming,2.0,True,0.1
+researched_expansion,reviewer_02,equity research analyst,overvalued,-1.8,True,0.1
+researched_expansion,reviewer_02,equity research analyst,rebound,1.8,True,0.1
+researched_expansion,reviewer_02,equity research analyst,recall,-1.8,True,0.1
+researched_expansion,reviewer_02,equity research analyst,rout,-2.8,True,0.1
+researched_expansion,reviewer_02,equity research analyst,selloff,-2.4,True,0.1
+researched_expansion,reviewer_02,equity research analyst,slowdown,-1.7,True,0.1
+researched_expansion,reviewer_02,equity research analyst,slump,-2.1,True,0.1
+researched_expansion,reviewer_02,equity research analyst,surpass,2.1,True,0.1
+researched_expansion,reviewer_02,equity research analyst,upside,1.9,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,antitrust,-1.1,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,blowout,2.4,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,breach,-2.3,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,contraction,-1.7,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,delist,-2.7,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,downturn,-2.2,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,fine_penalty,-2.1,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,headwind,-1.6,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,outage,-2.2,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,outperforming,2.2,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,overvalued,-1.8,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,rebound,1.8,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,recall,-1.9,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,rout,-2.8,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,selloff,-2.5,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,slowdown,-1.7,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,slump,-2.3,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,surpass,2.1,True,0.1
+researched_expansion,reviewer_03,model-risk reviewer,upside,1.9,True,0.1
+researched_expansion,reviewer_04,portfolio manager,antitrust,-1.2,True,0.1
+researched_expansion,reviewer_04,portfolio manager,blowout,2.2,True,0.1
+researched_expansion,reviewer_04,portfolio manager,breach,-2.2,True,0.1
+researched_expansion,reviewer_04,portfolio manager,contraction,-1.7,True,0.1
+researched_expansion,reviewer_04,portfolio manager,delist,-2.5,True,0.1
+researched_expansion,reviewer_04,portfolio manager,downturn,-2.0,True,0.1
+researched_expansion,reviewer_04,portfolio manager,fine_penalty,-1.9,True,0.1
+researched_expansion,reviewer_04,portfolio manager,headwind,-1.5,True,0.1
+researched_expansion,reviewer_04,portfolio manager,outage,-2.0,True,0.1
+researched_expansion,reviewer_04,portfolio manager,outperforming,2.0,True,0.1
+researched_expansion,reviewer_04,portfolio manager,overvalued,-1.7,True,0.1
+researched_expansion,reviewer_04,portfolio manager,rebound,1.7,True,0.1
+researched_expansion,reviewer_04,portfolio manager,recall,-1.9,True,0.1
+researched_expansion,reviewer_04,portfolio manager,rout,-2.7,True,0.1
+researched_expansion,reviewer_04,portfolio manager,selloff,-2.1,True,0.1
+researched_expansion,reviewer_04,portfolio manager,slowdown,-1.6,True,0.1
+researched_expansion,reviewer_04,portfolio manager,slump,-2.2,True,0.1
+researched_expansion,reviewer_04,portfolio manager,surpass,1.8,True,0.1
+researched_expansion,reviewer_04,portfolio manager,upside,1.6,True,0.1
+researched_expansion,reviewer_05,computational linguist,antitrust,-1.1,True,0.1
+researched_expansion,reviewer_05,computational linguist,blowout,2.3,True,0.1
+researched_expansion,reviewer_05,computational linguist,breach,-2.1,True,0.1
+researched_expansion,reviewer_05,computational linguist,contraction,-1.5,True,0.1
+researched_expansion,reviewer_05,computational linguist,delist,-2.4,True,0.1
+researched_expansion,reviewer_05,computational linguist,downturn,-1.9,True,0.1
+researched_expansion,reviewer_05,computational linguist,fine_penalty,-1.8,True,0.1
+researched_expansion,reviewer_05,computational linguist,headwind,-1.4,True,0.1
+researched_expansion,reviewer_05,computational linguist,outage,-1.9,True,0.1
+researched_expansion,reviewer_05,computational linguist,outperforming,2.0,True,0.1
+researched_expansion,reviewer_05,computational linguist,overvalued,-1.7,True,0.1
+researched_expansion,reviewer_05,computational linguist,rebound,1.7,True,0.1
+researched_expansion,reviewer_05,computational linguist,recall,-1.8,True,0.1
+researched_expansion,reviewer_05,computational linguist,rout,-2.5,True,0.1
+researched_expansion,reviewer_05,computational linguist,selloff,-2.2,True,0.1
+researched_expansion,reviewer_05,computational linguist,slowdown,-1.5,True,0.1
+researched_expansion,reviewer_05,computational linguist,slump,-2.0,True,0.1
+researched_expansion,reviewer_05,computational linguist,surpass,2.1,True,0.1
+researched_expansion,reviewer_05,computational linguist,upside,2.0,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,antitrust,-1.2,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,blowout,2.2,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,breach,-2.0,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,contraction,-1.4,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,delist,-2.4,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,downturn,-1.8,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,fine_penalty,-1.7,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,headwind,-1.3,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,outage,-1.8,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,outperforming,1.8,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,overvalued,-1.6,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,rebound,1.6,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,recall,-1.6,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,rout,-2.5,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,selloff,-2.1,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,slowdown,-1.4,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,slump,-1.8,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,surpass,1.8,True,0.1
+researched_expansion,reviewer_06,financial sentiment validation specialist,upside,1.5,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,antitrust,-1.2,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,blowout,1.7,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,breach,-1.9,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,contraction,-1.4,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,delist,-2.2,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,downturn,-1.8,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,fine_penalty,-1.8,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,headwind,-1.2,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,outage,-1.7,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,outperforming,1.6,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,overvalued,-1.5,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,rebound,1.6,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,recall,-1.5,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,rout,-2.3,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,selloff,-2.1,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,slowdown,-1.4,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,slump,-1.8,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,surpass,1.8,True,0.1
+researched_expansion,reviewer_07,financial disclosure analyst,upside,1.7,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,antitrust,0.0,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,blowout,1.4,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,breach,-1.8,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,contraction,-1.3,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,delist,-2.0,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,downturn,-1.8,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,fine_penalty,-1.5,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,headwind,-1.3,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,outage,-1.9,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,outperforming,1.7,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,overvalued,-1.5,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,rebound,1.5,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,recall,0.0,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,rout,-2.2,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,selloff,-2.0,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,slowdown,-1.5,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,slump,-1.8,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,surpass,1.7,True,0.1
+researched_expansion,reviewer_08,context-ambiguity NLP auditor,upside,1.6,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,antitrust,-1.1,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,blowout,2.2,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,breach,-2.1,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,contraction,-1.7,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,delist,-2.5,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,downturn,-2.0,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,fine_penalty,-1.9,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,headwind,-1.5,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,outage,-2.0,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,outperforming,1.8,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,overvalued,-1.8,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,rebound,1.8,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,recall,-1.7,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,rout,-2.7,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,selloff,-2.4,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,slowdown,-1.6,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,slump,-2.1,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,surpass,2.1,True,0.1
+researched_expansion,reviewer_09,credit and equity market analyst,upside,1.9,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,antitrust,-1.0,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,blowout,1.3,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,breach,-1.9,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,contraction,-1.4,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,delist,-2.1,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,downturn,-1.8,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,fine_penalty,-1.7,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,headwind,-1.3,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,outage,-2.0,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,outperforming,1.8,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,overvalued,-1.6,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,rebound,1.5,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,recall,0.0,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,rout,0.0,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,selloff,-2.0,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,slowdown,-1.4,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,slump,-1.8,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,surpass,1.6,True,0.1
+researched_expansion,reviewer_10,conservative validation reviewer,upside,1.7,True,0.1

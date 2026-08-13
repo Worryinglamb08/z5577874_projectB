@@ -1,0 +1,3 @@
+method,method_label,best_net_sharpe_schedule,best_net_sharpe,monthly_net_sharpe,monthly_minus_best_net_sharpe,daily_annualized_turnover,monthly_annualized_turnover,daily_to_monthly_turnover_ratio,daily_cost_drag_ending_growth,monthly_cost_drag_ending_growth,interpretation_scope
+maximum_sharpe,Maximum Sharpe,daily,0.8967123218651099,0.7763578226315341,-0.12035449923357577,14.123010211638396,3.3342722185480347,4.235710009840918,0.0689809592230215,0.015070802693328611,diagnostic evidence; monthly remains the primary product schedule
+risk_parity,Risk Parity,monthly,0.8832785588726769,0.8832785588726769,0.0,2.1591992161828473,0.7780818274365626,2.775028461076464,0.009433518946661668,0.0034328242207080084,diagnostic evidence; monthly remains the primary product schedule

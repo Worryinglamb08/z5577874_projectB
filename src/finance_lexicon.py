@@ -1,0 +1,576 @@
+"""Blind ten-reviewer governance for the finance-specific VADER lexicon."""
+
+from __future__ import annotations
+
+from statistics import fmean
+from typing import Final
+
+FAMILY_VARIANTS: Final[dict[str, tuple[str, ...]]] = {
+    "beat": ("beat", "beats", "beating"),
+    "upgrade": ("upgrade", "upgraded", "upgrades"),
+    "outperform": ("outperform", "outperformed", "outperforms"),
+    "bullish": ("bullish",),
+    "buyback": ("buyback", "buybacks"),
+    "miss": ("miss", "missed", "misses"),
+    "downgrade": ("downgrade", "downgraded", "downgrades"),
+    "underperform": ("underperform", "underperformed", "underperforms"),
+    "bearish": ("bearish",),
+    "default": ("default", "defaults"),
+    "bankruptcy": ("bankruptcy",),
+    "insolvency": ("insolvency",),
+    "impairment": ("impairment",),
+    "writedown": ("writedown", "writedowns"),
+    "layoff": ("layoff", "layoffs"),
+}
+
+FAMILY_RATIONALE: Final[dict[str, str]] = {
+    "beat": "Earnings or revenue above an announced benchmark.",
+    "upgrade": "Upward analyst or issuer assessment.",
+    "outperform": "Expected or realised performance above a benchmark.",
+    "bullish": "Explicit positive market direction.",
+    "buyback": "Issuer repurchase, commonly framed as shareholder support.",
+    "miss": "Earnings or revenue below an announced benchmark.",
+    "downgrade": "Downward analyst, issuer, or credit assessment.",
+    "underperform": "Expected or realised performance below a benchmark.",
+    "bearish": "Explicit negative market direction.",
+    "default": "Failure to meet a financial obligation.",
+    "bankruptcy": "Formal financial distress or insolvency process.",
+    "insolvency": "Inability to meet financial obligations.",
+    "impairment": "Recognised reduction in an asset's carrying value.",
+    "writedown": "Recognised reduction in an asset's carrying value.",
+    "layoff": "Workforce reduction, treated as a negative operating signal.",
+}
+
+REVIEWER_ROLES: Final[dict[str, str]] = {
+    "reviewer_01": "financial-news NLP reviewer",
+    "reviewer_02": "equity research analyst",
+    "reviewer_03": "model-risk reviewer",
+    "reviewer_04": "portfolio manager",
+    "reviewer_05": "computational linguist",
+    "reviewer_06": "financial sentiment validation specialist",
+    "reviewer_07": "financial disclosure analyst",
+    "reviewer_08": "context-ambiguity NLP auditor",
+    "reviewer_09": "credit and equity market analyst",
+    "reviewer_10": "conservative validation reviewer",
+}
+
+# Raw blinded responses. Reviewers saw the shared brief, contexts, frequencies,
+# and scale, but neither the former lexicon nor another reviewer's scores.
+REVIEW_SCORES: Final[dict[str, dict[str, float]]] = {
+    "reviewer_01": {
+        "beat": 1.8,
+        "upgrade": 2.1,
+        "outperform": 1.8,
+        "bullish": 2.3,
+        "buyback": 1.3,
+        "miss": -1.8,
+        "downgrade": -2.2,
+        "underperform": -1.8,
+        "bearish": -2.3,
+        "default": -3.0,
+        "bankruptcy": -3.4,
+        "insolvency": -3.3,
+        "impairment": -2.0,
+        "writedown": -2.2,
+        "layoff": -2.3,
+    },
+    "reviewer_02": {
+        "beat": 2.0,
+        "upgrade": 2.2,
+        "outperform": 2.1,
+        "bullish": 2.3,
+        "buyback": 1.4,
+        "miss": -2.0,
+        "downgrade": -2.3,
+        "underperform": -2.1,
+        "bearish": -2.3,
+        "default": -3.2,
+        "bankruptcy": -3.5,
+        "insolvency": -3.4,
+        "impairment": -2.1,
+        "writedown": -2.2,
+        "layoff": -2.0,
+    },
+    "reviewer_03": {
+        "beat": 2.1,
+        "upgrade": 2.3,
+        "outperform": 2.0,
+        "bullish": 2.5,
+        "buyback": 1.5,
+        "miss": -2.1,
+        "downgrade": -2.4,
+        "underperform": -2.0,
+        "bearish": -2.5,
+        "default": -3.2,
+        "bankruptcy": -3.6,
+        "insolvency": -3.5,
+        "impairment": -2.0,
+        "writedown": -2.3,
+        "layoff": -2.1,
+    },
+    "reviewer_04": {
+        "beat": 2.2,
+        "upgrade": 2.4,
+        "outperform": 2.3,
+        "bullish": 2.5,
+        "buyback": 1.4,
+        "miss": -2.2,
+        "downgrade": -2.4,
+        "underperform": -2.3,
+        "bearish": -2.5,
+        "default": -3.1,
+        "bankruptcy": -3.5,
+        "insolvency": -3.4,
+        "impairment": -2.1,
+        "writedown": -2.2,
+        "layoff": -2.0,
+    },
+    "reviewer_05": {
+        "beat": 2.4,
+        "upgrade": 2.3,
+        "outperform": 2.1,
+        "bullish": 2.5,
+        "buyback": 1.4,
+        "miss": -2.4,
+        "downgrade": -2.5,
+        "underperform": -2.1,
+        "bearish": -2.5,
+        "default": -3.3,
+        "bankruptcy": -3.5,
+        "insolvency": -3.5,
+        "impairment": -2.2,
+        "writedown": -2.4,
+        "layoff": -2.3,
+    },
+    "reviewer_06": {
+        "beat": 2.1,
+        "upgrade": 2.2,
+        "outperform": 1.9,
+        "bullish": 2.3,
+        "buyback": 1.3,
+        "miss": -2.1,
+        "downgrade": -2.3,
+        "underperform": -1.9,
+        "bearish": -2.3,
+        "default": -3.4,
+        "bankruptcy": -3.6,
+        "insolvency": -3.5,
+        "impairment": -2.1,
+        "writedown": -2.2,
+        "layoff": -1.8,
+    },
+    "reviewer_07": {
+        "beat": 2.2,
+        "upgrade": 2.3,
+        "outperform": 2.1,
+        "bullish": 2.3,
+        "buyback": 1.2,
+        "miss": -2.1,
+        "downgrade": -2.4,
+        "underperform": -2.2,
+        "bearish": -2.3,
+        "default": -3.2,
+        "bankruptcy": -3.5,
+        "insolvency": -3.4,
+        "impairment": -2.0,
+        "writedown": -2.2,
+        "layoff": -2.1,
+    },
+    "reviewer_08": {
+        "beat": 1.9,
+        "upgrade": 2.1,
+        "outperform": 2.2,
+        "bullish": 2.4,
+        "buyback": 1.1,
+        "miss": -1.9,
+        "downgrade": -2.1,
+        "underperform": -2.2,
+        "bearish": -2.4,
+        "default": -3.1,
+        "bankruptcy": -3.4,
+        "insolvency": -3.3,
+        "impairment": -2.0,
+        "writedown": -2.1,
+        "layoff": -2.0,
+    },
+    "reviewer_09": {
+        "beat": 2.1,
+        "upgrade": 2.3,
+        "outperform": 2.2,
+        "bullish": 2.4,
+        "buyback": 1.4,
+        "miss": -2.1,
+        "downgrade": -2.4,
+        "underperform": -2.2,
+        "bearish": -2.4,
+        "default": -3.3,
+        "bankruptcy": -3.5,
+        "insolvency": -3.4,
+        "impairment": -2.2,
+        "writedown": -2.3,
+        "layoff": -2.0,
+    },
+    "reviewer_10": {
+        "beat": 1.8,
+        "upgrade": 2.0,
+        "outperform": 1.7,
+        "bullish": 2.1,
+        "buyback": 1.2,
+        "miss": -1.8,
+        "downgrade": -2.0,
+        "underperform": -1.7,
+        "bearish": -2.1,
+        "default": -3.0,
+        "bankruptcy": -3.4,
+        "insolvency": -3.2,
+        "impairment": -1.8,
+        "writedown": -2.0,
+        "layoff": -2.1,
+    },
+}
+
+EXPANSION_FAMILY_VARIANTS: Final[dict[str, tuple[str, ...]]] = {
+    "rebound": ("rebound", "rebounds", "rebounded", "rebounding"),
+    "surpass": ("surpass", "surpasses", "surpassed", "surpassing"),
+    "upside": ("upside", "upsides"),
+    "blowout": ("blowout", "blowouts"),
+    "outperforming": ("outperforming",),
+    "slump": ("slump", "slumps", "slumped", "slumping"),
+    "selloff": ("selloff", "selloffs", "sell-off", "sell-offs"),
+    "rout": ("rout",),
+    "headwind": ("headwind", "headwinds"),
+    "slowdown": ("slowdown", "slowdowns"),
+    "overvalued": ("overvalued",),
+    "downturn": ("downturn", "downturns"),
+    "contraction": ("contraction", "contractions"),
+    "antitrust": ("antitrust",),
+    "recall": ("recall", "recalls", "recalled", "recalling"),
+    "breach": ("breach", "breaches", "breached"),
+    "outage": ("outage", "outages"),
+    "fine_penalty": ("fined", "fines"),
+    "delist": ("delist", "delisted", "delisting"),
+}
+
+EXPANSION_FAMILY_RATIONALE: Final[dict[str, str]] = {
+    "rebound": "Recovery in price, activity, or results.",
+    "surpass": "Results or performance above a benchmark.",
+    "upside": "Favourable valuation or return potential.",
+    "blowout": "Exceptionally strong results or launch.",
+    "outperforming": "Performance above a benchmark.",
+    "slump": "Adverse decline or weak activity.",
+    "selloff": "Broad or security-level selling decline.",
+    "rout": "Severe market or security decline.",
+    "headwind": "Obstacle to operating or financial performance.",
+    "slowdown": "Adverse deceleration in activity or growth.",
+    "overvalued": "Valuation viewed as too high.",
+    "downturn": "Negative economic, industry, or company cycle.",
+    "contraction": "Reduction in economic activity, revenue, or demand.",
+    "antitrust": "Competition-law scrutiny or action.",
+    "recall": "Product withdrawal for quality or safety reasons.",
+    "breach": "Covenant, data, contract, or rules failure.",
+    "outage": "Operational or service disruption.",
+    "fine_penalty": "Monetary regulatory or legal penalty.",
+    "delist": "Loss or threatened loss of exchange listing.",
+}
+
+# Second blind panel. A zero is retained as an exclusion vote and contributes
+# zero to the requested unweighted arithmetic mean.
+EXPANSION_REVIEW_SCORES: Final[dict[str, dict[str, float]]] = {
+    "reviewer_01": {
+        "rebound": 1.7,
+        "surpass": 2.0,
+        "upside": 1.8,
+        "blowout": 2.3,
+        "outperforming": 2.1,
+        "slump": -2.0,
+        "selloff": -2.2,
+        "rout": -2.4,
+        "headwind": -1.5,
+        "slowdown": -1.6,
+        "overvalued": -1.5,
+        "downturn": -1.8,
+        "contraction": -1.5,
+        "antitrust": -1.3,
+        "recall": -1.7,
+        "breach": -2.0,
+        "outage": -2.0,
+        "fine_penalty": -1.8,
+        "delist": -2.3,
+    },
+    "reviewer_02": {
+        "rebound": 1.8,
+        "surpass": 2.1,
+        "upside": 1.9,
+        "blowout": 2.5,
+        "outperforming": 2.0,
+        "slump": -2.1,
+        "selloff": -2.4,
+        "rout": -2.8,
+        "headwind": -1.5,
+        "slowdown": -1.7,
+        "overvalued": -1.8,
+        "downturn": -2.0,
+        "contraction": -1.8,
+        "antitrust": -1.4,
+        "recall": -1.8,
+        "breach": -2.1,
+        "outage": -2.0,
+        "fine_penalty": -1.8,
+        "delist": -2.4,
+    },
+    "reviewer_03": {
+        "rebound": 1.8,
+        "surpass": 2.1,
+        "upside": 1.9,
+        "blowout": 2.4,
+        "outperforming": 2.2,
+        "slump": -2.3,
+        "selloff": -2.5,
+        "rout": -2.8,
+        "headwind": -1.6,
+        "slowdown": -1.7,
+        "overvalued": -1.8,
+        "downturn": -2.2,
+        "contraction": -1.7,
+        "antitrust": -1.1,
+        "recall": -1.9,
+        "breach": -2.3,
+        "outage": -2.2,
+        "fine_penalty": -2.1,
+        "delist": -2.7,
+    },
+    "reviewer_04": {
+        "rebound": 1.7,
+        "surpass": 1.8,
+        "upside": 1.6,
+        "blowout": 2.2,
+        "outperforming": 2.0,
+        "slump": -2.2,
+        "selloff": -2.1,
+        "rout": -2.7,
+        "headwind": -1.5,
+        "slowdown": -1.6,
+        "overvalued": -1.7,
+        "downturn": -2.0,
+        "contraction": -1.7,
+        "antitrust": -1.2,
+        "recall": -1.9,
+        "breach": -2.2,
+        "outage": -2.0,
+        "fine_penalty": -1.9,
+        "delist": -2.5,
+    },
+    "reviewer_05": {
+        "rebound": 1.7,
+        "surpass": 2.1,
+        "upside": 2.0,
+        "blowout": 2.3,
+        "outperforming": 2.0,
+        "slump": -2.0,
+        "selloff": -2.2,
+        "rout": -2.5,
+        "headwind": -1.4,
+        "slowdown": -1.5,
+        "overvalued": -1.7,
+        "downturn": -1.9,
+        "contraction": -1.5,
+        "antitrust": -1.1,
+        "recall": -1.8,
+        "breach": -2.1,
+        "outage": -1.9,
+        "fine_penalty": -1.8,
+        "delist": -2.4,
+    },
+    "reviewer_06": {
+        "rebound": 1.6,
+        "surpass": 1.8,
+        "upside": 1.5,
+        "blowout": 2.2,
+        "outperforming": 1.8,
+        "slump": -1.8,
+        "selloff": -2.1,
+        "rout": -2.5,
+        "headwind": -1.3,
+        "slowdown": -1.4,
+        "overvalued": -1.6,
+        "downturn": -1.8,
+        "contraction": -1.4,
+        "antitrust": -1.2,
+        "recall": -1.6,
+        "breach": -2.0,
+        "outage": -1.8,
+        "fine_penalty": -1.7,
+        "delist": -2.4,
+    },
+    "reviewer_07": {
+        "rebound": 1.6,
+        "surpass": 1.8,
+        "upside": 1.7,
+        "blowout": 1.7,
+        "outperforming": 1.6,
+        "slump": -1.8,
+        "selloff": -2.1,
+        "rout": -2.3,
+        "headwind": -1.2,
+        "slowdown": -1.4,
+        "overvalued": -1.5,
+        "downturn": -1.8,
+        "contraction": -1.4,
+        "antitrust": -1.2,
+        "recall": -1.5,
+        "breach": -1.9,
+        "outage": -1.7,
+        "fine_penalty": -1.8,
+        "delist": -2.2,
+    },
+    "reviewer_08": {
+        "rebound": 1.5,
+        "surpass": 1.7,
+        "upside": 1.6,
+        "blowout": 1.4,
+        "outperforming": 1.7,
+        "slump": -1.8,
+        "selloff": -2.0,
+        "rout": -2.2,
+        "headwind": -1.3,
+        "slowdown": -1.5,
+        "overvalued": -1.5,
+        "downturn": -1.8,
+        "contraction": -1.3,
+        "antitrust": 0.0,
+        "recall": 0.0,
+        "breach": -1.8,
+        "outage": -1.9,
+        "fine_penalty": -1.5,
+        "delist": -2.0,
+    },
+    "reviewer_09": {
+        "rebound": 1.8,
+        "surpass": 2.1,
+        "upside": 1.9,
+        "blowout": 2.2,
+        "outperforming": 1.8,
+        "slump": -2.1,
+        "selloff": -2.4,
+        "rout": -2.7,
+        "headwind": -1.5,
+        "slowdown": -1.6,
+        "overvalued": -1.8,
+        "downturn": -2.0,
+        "contraction": -1.7,
+        "antitrust": -1.1,
+        "recall": -1.7,
+        "breach": -2.1,
+        "outage": -2.0,
+        "fine_penalty": -1.9,
+        "delist": -2.5,
+    },
+    "reviewer_10": {
+        "rebound": 1.5,
+        "surpass": 1.6,
+        "upside": 1.7,
+        "blowout": 1.3,
+        "outperforming": 1.8,
+        "slump": -1.8,
+        "selloff": -2.0,
+        "rout": 0.0,
+        "headwind": -1.3,
+        "slowdown": -1.4,
+        "overvalued": -1.6,
+        "downturn": -1.8,
+        "contraction": -1.4,
+        "antitrust": -1.0,
+        "recall": 0.0,
+        "breach": -1.9,
+        "outage": -2.0,
+        "fine_penalty": -1.7,
+        "delist": -2.1,
+    },
+}
+
+
+def _validate_reviews() -> None:
+    panels = (
+        ("initial", FAMILY_VARIANTS, REVIEW_SCORES),
+        ("expansion", EXPANSION_FAMILY_VARIANTS, EXPANSION_REVIEW_SCORES),
+    )
+    for panel_name, families, panel_scores in panels:
+        expected = set(families)
+        if len(panel_scores) != 10:
+            raise ValueError(f"the {panel_name} panel requires exactly ten reviews")
+        if set(panel_scores) != set(REVIEWER_ROLES):
+            raise ValueError(f"{panel_name} reviewer roles and scores do not match")
+        for reviewer, scores in panel_scores.items():
+            if set(scores) != expected:
+                raise ValueError(
+                    f"{reviewer} did not score every {panel_name} finance family"
+                )
+            if any(not -4.0 <= score <= 4.0 for score in scores.values()):
+                raise ValueError(
+                    f"{reviewer} supplied a {panel_name} score outside [-4, 4]"
+                )
+
+
+_validate_reviews()
+
+AVERAGED_FAMILY_SCORES: Final[dict[str, float]] = {
+    family: fmean(scores[family] for scores in REVIEW_SCORES.values())
+    for family in FAMILY_VARIANTS
+}
+
+EXPANSION_AVERAGED_FAMILY_SCORES: Final[dict[str, float]] = {
+    family: fmean(scores[family] for scores in EXPANSION_REVIEW_SCORES.values())
+    for family in EXPANSION_FAMILY_VARIANTS
+}
+
+ALL_FAMILY_VARIANTS: Final[dict[str, tuple[str, ...]]] = {
+    **FAMILY_VARIANTS,
+    **EXPANSION_FAMILY_VARIANTS,
+}
+
+ALL_FAMILY_RATIONALE: Final[dict[str, str]] = {
+    **FAMILY_RATIONALE,
+    **EXPANSION_FAMILY_RATIONALE,
+}
+
+ALL_AVERAGED_FAMILY_SCORES: Final[dict[str, float]] = {
+    **AVERAGED_FAMILY_SCORES,
+    **EXPANSION_AVERAGED_FAMILY_SCORES,
+}
+
+# Student review completed after the two blinded panels. The student approved
+# every proposed family score except ``layoff``. That family is excluded because
+# workforce reductions can be interpreted as either an operating warning or a
+# favourable cost response, so one fixed headline valence is not defensible.
+STUDENT_EXCLUDED_FAMILIES: Final[frozenset[str]] = frozenset({"layoff"})
+STUDENT_APPROVED_FAMILY_SCORES: Final[dict[str, float]] = {
+    family: score
+    for family, score in ALL_AVERAGED_FAMILY_SCORES.items()
+    if family not in STUDENT_EXCLUDED_FAMILIES
+}
+
+FINANCE_LEXICON: Final[dict[str, float]] = {
+    variant: STUDENT_APPROVED_FAMILY_SCORES[family]
+    for family, variants in ALL_FAMILY_VARIANTS.items()
+    if family in STUDENT_APPROVED_FAMILY_SCORES
+    for variant in variants
+}
+
+
+__all__ = [
+    "ALL_AVERAGED_FAMILY_SCORES",
+    "ALL_FAMILY_RATIONALE",
+    "ALL_FAMILY_VARIANTS",
+    "AVERAGED_FAMILY_SCORES",
+    "EXPANSION_AVERAGED_FAMILY_SCORES",
+    "EXPANSION_FAMILY_RATIONALE",
+    "EXPANSION_FAMILY_VARIANTS",
+    "EXPANSION_REVIEW_SCORES",
+    "FAMILY_RATIONALE",
+    "FAMILY_VARIANTS",
+    "FINANCE_LEXICON",
+    "REVIEWER_ROLES",
+    "REVIEW_SCORES",
+    "STUDENT_APPROVED_FAMILY_SCORES",
+    "STUDENT_EXCLUDED_FAMILIES",
+]

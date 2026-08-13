@@ -1,0 +1,10 @@
+check,status,detail
+compact_performance_has_15_funds,pass,Phase 6 evidence contract satisfied
+all_15_fact_sheets_reconcile,pass,Phase 6 evidence contract satisfied
+plain_finance_validation_complete,pass,Phase 6 evidence contract satisfied
+coverage_summary_has_10_sectors,pass,Phase 6 evidence contract satisfied
+all_9_exhibits_have_context_and_pass,pass,Phase 6 evidence contract satisfied
+all_claims_reconciled,pass,Phase 6 evidence contract satisfied
+all_claim_source_artifacts_exist,pass,Phase 6 evidence contract satisfied
+upstream_phase_validations_pass,pass,Phase 6 evidence contract satisfied
+displayed_numeric_values_are_finite,pass,Phase 6 evidence contract satisfied

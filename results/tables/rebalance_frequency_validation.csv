@@ -1,0 +1,15 @@
+check,observed_value,pass_rule,status
+experiment_path_count,8.0,equal 8,pass
+unique_first_live_dates,1.0,equal 1,pass
+unique_last_live_dates,1.0,equal 1,pass
+unique_estimation_windows,1.0,equal 1,pass
+unique_eligible_asset_counts,1.0,equal 1,pass
+temporal_order_violations,0.0,equal 0,pass
+solver_failure_count,0.0,equal 0,pass
+maximum_weight_sum_residual,1.654558934305328e-09,maximum 1e-07,pass
+maximum_bound_residual,0.0,maximum 1e-07,pass
+maximum_crypto_sleeve,0.3000000000010418,maximum 0.3000001,pass
+monthly_primary_return_difference,0.0,maximum 1e-14,pass
+monthly_primary_weight_difference,0.0,maximum 1e-14,pass
+cost_order_violations,0.0,equal 0,pass
+rebalance_count_order_violations,0.0,equal 0,pass

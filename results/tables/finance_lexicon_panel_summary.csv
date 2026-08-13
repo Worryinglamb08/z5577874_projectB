@@ -1,0 +1,35 @@
+review_round,canonical_family,reviewer_count,arithmetic_mean_score,sample_standard_deviation,minimum_score,maximum_score,zero_exclusion_votes,aggregation_rule,variants,rationale
+initial_compact_lexicon,beat,10,2.06,0.18973665961010278,1.8,2.4,0,unweighted arithmetic mean including zeros,"beat, beats, beating",Earnings or revenue above an announced benchmark.
+initial_compact_lexicon,upgrade,10,2.2199999999999998,0.12292725943057174,2.0,2.4,0,unweighted arithmetic mean including zeros,"upgrade, upgraded, upgrades",Upward analyst or issuer assessment.
+initial_compact_lexicon,outperform,10,2.04,0.18973665961010278,1.7,2.3,0,unweighted arithmetic mean including zeros,"outperform, outperformed, outperforms",Expected or realised performance above a benchmark.
+initial_compact_lexicon,bullish,10,2.36,0.1264911064067352,2.1,2.5,0,unweighted arithmetic mean including zeros,bullish,Explicit positive market direction.
+initial_compact_lexicon,buyback,10,1.3199999999999998,0.1229272594305718,1.1,1.5,0,unweighted arithmetic mean including zeros,"buyback, buybacks","Issuer repurchase, commonly framed as shareholder support."
+initial_compact_lexicon,miss,10,-2.05,0.18408935028645435,-2.4,-1.8,0,unweighted arithmetic mean including zeros,"miss, missed, misses",Earnings or revenue below an announced benchmark.
+initial_compact_lexicon,downgrade,10,-2.3,0.15634719199411426,-2.5,-2.0,0,unweighted arithmetic mean including zeros,"downgrade, downgraded, downgrades","Downward analyst, issuer, or credit assessment."
+initial_compact_lexicon,underperform,10,-2.05,0.19578900207451222,-2.3,-1.7,0,unweighted arithmetic mean including zeros,"underperform, underperformed, underperforms",Expected or realised performance below a benchmark.
+initial_compact_lexicon,bearish,10,-2.36,0.1264911064067352,-2.5,-2.1,0,unweighted arithmetic mean including zeros,bearish,Explicit negative market direction.
+initial_compact_lexicon,default,10,-3.18,0.1316561177208766,-3.4,-3.0,0,unweighted arithmetic mean including zeros,"default, defaults",Failure to meet a financial obligation.
+initial_compact_lexicon,bankruptcy,10,-3.4899999999999998,0.07378647873726225,-3.6,-3.4,0,unweighted arithmetic mean including zeros,bankruptcy,Formal financial distress or insolvency process.
+initial_compact_lexicon,insolvency,10,-3.3899999999999997,0.09944289260117531,-3.5,-3.2,0,unweighted arithmetic mean including zeros,insolvency,Inability to meet financial obligations.
+initial_compact_lexicon,impairment,10,-2.05,0.11785113019775798,-2.2,-1.8,0,unweighted arithmetic mean including zeros,impairment,Recognised reduction in an asset's carrying value.
+initial_compact_lexicon,writedown,10,-2.21,0.11005049346146112,-2.4,-2.0,0,unweighted arithmetic mean including zeros,"writedown, writedowns",Recognised reduction in an asset's carrying value.
+initial_compact_lexicon,layoff,10,-2.07,0.14944341180973256,-2.3,-1.8,0,unweighted arithmetic mean including zeros,"layoff, layoffs","Workforce reduction, treated as a negative operating signal."
+researched_expansion,rebound,10,1.67,0.11595018087284058,1.5,1.8,0,unweighted arithmetic mean including zeros,"rebound, rebounds, rebounded, rebounding","Recovery in price, activity, or results."
+researched_expansion,surpass,10,1.9100000000000001,0.19119507199599983,1.6,2.1,0,unweighted arithmetic mean including zeros,"surpass, surpasses, surpassed, surpassing",Results or performance above a benchmark.
+researched_expansion,upside,10,1.7600000000000002,0.16465452046971288,1.5,2.0,0,unweighted arithmetic mean including zeros,"upside, upsides",Favourable valuation or return potential.
+researched_expansion,blowout,10,2.05,0.42491829279939874,1.3,2.5,0,unweighted arithmetic mean including zeros,"blowout, blowouts",Exceptionally strong results or launch.
+researched_expansion,outperforming,10,1.9,0.1885618083164127,1.6,2.2,0,unweighted arithmetic mean including zeros,outperforming,Performance above a benchmark.
+researched_expansion,slump,10,-1.9899999999999998,0.18529256146249726,-2.3,-1.8,0,unweighted arithmetic mean including zeros,"slump, slumps, slumped, slumping",Adverse decline or weak activity.
+researched_expansion,selloff,10,-2.2,0.17638342073763932,-2.5,-2.0,0,unweighted arithmetic mean including zeros,"selloff, selloffs, sell-off, sell-offs",Broad or security-level selling decline.
+researched_expansion,rout,10,-2.29,0.8305955025696256,-2.8,0.0,1,unweighted arithmetic mean including zeros,rout,Severe market or security decline.
+researched_expansion,headwind,10,-1.41,0.1286683937707919,-1.6,-1.2,0,unweighted arithmetic mean including zeros,"headwind, headwinds",Obstacle to operating or financial performance.
+researched_expansion,slowdown,10,-1.54,0.11737877907772676,-1.7,-1.4,0,unweighted arithmetic mean including zeros,"slowdown, slowdowns",Adverse deceleration in activity or growth.
+researched_expansion,overvalued,10,-1.65,0.1269295517643985,-1.8,-1.5,0,unweighted arithmetic mean including zeros,overvalued,Valuation viewed as too high.
+researched_expansion,downturn,10,-1.9100000000000001,0.1370320319406298,-2.2,-1.8,0,unweighted arithmetic mean including zeros,"downturn, downturns","Negative economic, industry, or company cycle."
+researched_expansion,contraction,10,-1.54,0.17126976771553507,-1.8,-1.3,0,unweighted arithmetic mean including zeros,"contraction, contractions","Reduction in economic activity, revenue, or demand."
+researched_expansion,antitrust,10,-1.06,0.3893013685508382,-1.4,0.0,1,unweighted arithmetic mean including zeros,antitrust,Competition-law scrutiny or action.
+researched_expansion,recall,10,-1.3900000000000001,0.7430417963419764,-1.9,0.0,2,unweighted arithmetic mean including zeros,"recall, recalls, recalled, recalling",Product withdrawal for quality or safety reasons.
+researched_expansion,breach,10,-2.04,0.1505545305418162,-2.3,-1.8,0,unweighted arithmetic mean including zeros,"breach, breaches, breached","Covenant, data, contract, or rules failure."
+researched_expansion,outage,10,-1.95,0.13540064007726604,-2.2,-1.7,0,unweighted arithmetic mean including zeros,"outage, outages",Operational or service disruption.
+researched_expansion,fine_penalty,10,-1.8,0.15634719199411434,-2.1,-1.5,0,unweighted arithmetic mean including zeros,"fined, fines",Monetary regulatory or legal penalty.
+researched_expansion,delist,10,-2.35,0.20682789409984761,-2.7,-2.0,0,unweighted arithmetic mean including zeros,"delist, delisted, delisting",Loss or threatened loss of exchange listing.

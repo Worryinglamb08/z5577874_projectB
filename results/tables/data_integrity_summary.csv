@@ -1,0 +1,28 @@
+dataset,check,value,status,treatment
+equity_prices,ticker_count,50,pass,Required universe: 50 tickers.
+equity_prices,sector_count,10,pass,Required universe: 10 sectors.
+equity_prices,missing_values_clean,0,pass,Retained where allowed and reported by field in data_schema.csv.
+equity_prices,timezone_aware_dates_clean,0,pass,Converted to timezone-naive midnight dates before joins.
+crypto_prices,ticker_count,10,pass,Required universe: 10 tickers.
+crypto_prices,missing_values_clean,0,pass,Retained where allowed and reported by field in data_schema.csv.
+crypto_prices,timezone_aware_dates_clean,0,pass,Converted to timezone-naive midnight dates before joins.
+news_headlines,ticker_count,50,pass,Required universe: 50 tickers.
+news_headlines,sector_count,10,pass,Required universe: 10 sectors.
+news_headlines,missing_values_clean,137447,documented,Retained where allowed and reported by field in data_schema.csv.
+news_headlines,timezone_aware_dates_clean,0,pass,Converted to timezone-naive midnight dates before joins.
+equity_prices,duplicate_ticker_date_rows_raw,0,pass,Price keys must be unique; duplicates stop the pipeline.
+equity_prices,nonpositive_adjusted_prices_clean,0,pass,Nonpositive adjusted prices stop the pipeline.
+equity_prices,negative_volume_rows_clean,0,pass,Negative volume stops the pipeline.
+equity_prices,invalid_ohlc_rows_clean,0,pass,Invalid high/low ordering stops the pipeline.
+equity_prices,missing_native_calendar_dates,0,pass,Retained and detailed in missing_dates_by_ticker.csv.
+equity_prices,absolute_returns_at_least_20_pct,16,documented,Retained unless an internal validation rule shows a data error.
+crypto_prices,duplicate_ticker_date_rows_raw,0,pass,Price keys must be unique; duplicates stop the pipeline.
+crypto_prices,nonpositive_adjusted_prices_clean,0,pass,Nonpositive adjusted prices stop the pipeline.
+crypto_prices,negative_volume_rows_clean,0,pass,Negative volume stops the pipeline.
+crypto_prices,invalid_ohlc_rows_clean,0,pass,Invalid high/low ordering stops the pipeline.
+crypto_prices,missing_native_calendar_dates,0,pass,Retained and detailed in missing_dates_by_ticker.csv.
+crypto_prices,absolute_returns_at_least_20_pct,112,documented,Retained unless an internal validation rule shows a data error.
+crypto_prices,rows_after_2023_12_31_raw,10,resolved,Removed to enforce the supplied 2020--2023 analysis sample.
+news_headlines,duplicate_ticker_date_title_rows_raw,2847,resolved,Removed exact key duplicates only; different same-day titles retained.
+news_headlines,publisher_missing_clean,137447,documented,Retained as missing; not interpreted as low publisher diversity.
+news_headlines,daily_calendar_gaps,not_applicable,pass,Headlines are event-driven; no article is required every ticker-day.

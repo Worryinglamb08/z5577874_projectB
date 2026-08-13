@@ -1,0 +1,13 @@
+check,observed_value,pass_rule,status
+prototype_path_count,5,equal 5,pass
+primary_black_litterman_path_count,1,equal 1,pass
+rebalance_count_per_path,36,equal 36,pass
+solver_failure_count,0,equal 0,pass
+temporal_order_violations,0,equal 0,pass
+signal_timing_violations,0,equal 0,pass
+maximum_weight_sum_residual,4.440892098500626e-16,maximum 1e-07,pass
+maximum_bound_residual,0.0,maximum 1e-07,pass
+risk_parity_daily_path_identity,True,equal True,pass
+risk_parity_target_identity,True,equal True,pass
+approved_menu_excludes_black_litterman,5,equal 5,pass
+metrics_finite,True,equal True,pass

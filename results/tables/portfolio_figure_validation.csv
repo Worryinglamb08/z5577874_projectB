@@ -1,0 +1,6 @@
+figure,status,check,detail
+fund_growth,pass,all_selected_checks,"Context, labels, layout, ticks, readability, and image passed."
+combined_fund_drawdowns,pass,all_selected_checks,"Context, labels, layout, ticks, readability, and image passed."
+fund_risk_return,pass,all_selected_checks,"Context, labels, layout, ticks, readability, and image passed."
+fund_sharpe_by_family,pass,all_selected_checks,"Context, labels, layout, ticks, readability, and image passed."
+combined_weight_history,pass,all_selected_checks,"Context, labels, layout, ticks, readability, and image passed."

@@ -1,0 +1,3 @@
+asset_class,ticker,previous_date,date,previous_adjClose,adjClose,formula,hand_calculated_return,function_return,difference,check_passed
+Equity,NVDA,2020-01-02,2020-01-03,5.963804721832275,5.868348598480225,adjClose_t / adjClose_t-1 - 1,-0.01600591028787468,-0.01600591028787468,0.0,True
+Crypto,BTC-USD,2020-01-01,2020-01-02,7200.17431640625,6985.47021484375,adjClose_t / adjClose_t-1 - 1,-0.029819292162590716,-0.029819292162590716,0.0,True

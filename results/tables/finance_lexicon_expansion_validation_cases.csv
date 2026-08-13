@@ -1,0 +1,39 @@
+canonical_family,headline_date,aligned_trading_date,ticker,sector,title,plain_compound,finance_compound,finance_score_change,plain_label,finance_label,ai_expected_direction,student_expected_direction,student_review_status
+rebound,2020-01-29,2020-01-29,SBUX,Consumer,PreMarket Prep Recap: Apple Q1 Beat Aids Rebound From Monday's Low,-0.2732,0.5618,0.835,negative,positive,positive,,review required
+rebound,2022-02-04,2022-02-04,XOM,Energy,Magellan (MMP) Q4 Earnings Beat Estimates as Demand Rebounds,-0.128,0.6405,0.7685,negative,positive,positive,,review required
+surpass,2020-10-22,2020-10-22,T,Comm,"AT&T takes pandemic hit, but surpasses revenue expectations",0.0,0.5947,0.5947,neutral,positive,positive,,review required
+surpass,2022-08-03,2022-08-03,AEP,Utilities,"Exelon (EXC) Q2 Earnings Lag Estimates, Revenues Surpass",-0.34,0.1306,0.4706,negative,positive,positive,,review required
+upside,2021-03-24,2021-03-24,ADBE,Tech,Adobe Lifts FY21 Outlook After 1Q Beat; Street Sees 22% Upside,0.0,0.7022,0.7022,neutral,positive,positive,,review required
+upside,2023-04-18,2023-04-18,WFC,Financials,"Bank of America Beats Earnings, Renews Investor Upside Potential",0.0,0.7022,0.7022,neutral,positive,positive,,review required
+blowout,2022-07-29,2022-07-29,CVX,Energy,"U.S. oil giants Exxon, Chevron post blowout earnings, ramp up buybacks",0.0,0.6564,0.6564,neutral,positive,positive,,review required
+blowout,2022-07-29,2022-07-29,XOM,Energy,"U.S. oil giants Exxon, Chevron post blowout earnings, ramp up buybacks",0.0,0.6564,0.6564,neutral,positive,positive,,review required
+outperforming,2020-02-04,2020-02-04,WMT,Consumer,"After This Last Earnings Beat, Amazon Stock Will Keep Outperforming",0.1779,0.7691,0.5912,positive,positive,positive,,review required
+outperforming,2023-01-20,2023-01-20,WFC,Financials,"Wells Fargo's Deposit Base Is Rising, But Continues Outperforming Peers",0.128,0.6542,0.5262,positive,positive,positive,,review required
+slump,2023-07-19,2023-07-19,GS,Financials,"Goldman's second-quarter profit falls on GreenSky writedown, dealmaking slump",0.4404,-0.5106,-0.9510000000000001,positive,negative,negative,,review required
+slump,2023-07-19,2023-07-19,MS,Financials,"Goldman's second-quarter profit falls on GreenSky writedown, dealmaking slump",0.4404,-0.5106,-0.9510000000000001,positive,negative,negative,,review required
+selloff,2023-08-08,2023-08-08,GS,Financials,US STOCKS-Wall St falls as Moody's bank downgrades spark broad sell-off,0.2263,-0.6808,-0.9071,positive,negative,negative,,review required
+selloff,2023-08-08,2023-08-08,USB,Financials,US STOCKS-Wall St falls as Moody's bank downgrades spark broad sell-off,0.2263,-0.6808,-0.9071,positive,negative,negative,,review required
+rout,2023-03-13,2023-03-13,GS,Financials,Hedge funds stand to lap up bearish profits from bank stock rout,0.4404,-0.5789,-1.0192999999999999,positive,negative,negative,,review required
+rout,2021-11-11,2021-11-11,CAT,Industrials,"U.S. stock futures rise after inflation-driven rout, Disney shares tumble",0.296,-0.2709,-0.5669,positive,negative,negative,,review required
+headwind,2020-04-27,2020-04-27,CAT,Industrials,"UPDATE: Morgan Stanley Downgrades Caterpillar And United Rentals As Firm Sees 'growing headwinds from a multi-year downturn in Non-Resi Construction, combined with historically weak oil prices and declining mining commodity price'",0.1531,-0.7918,-0.9449,positive,negative,negative,,review required
+headwind,2021-02-23,2021-02-23,WFC,Financials,"Despite Interest Rate Headwinds, HSBC Stock Is Likely To Beat Consensus In Q4",-0.357,0.3866,0.7436,negative,positive,positive,,review required
+slowdown,2020-01-31,2020-01-31,MS,Financials,"Shares of several financial services companies are trading lower as the coronavirus spread continues to cause concerns of economic slowdown after China confirmed over 9,000 confirmed cases. NOTE: The coronavirus outbreak has caused selloffs in global markets.",0.0,-0.6946,-0.6946,neutral,negative,negative,,review required
+slowdown,2020-01-15,2020-01-15,SLB,Energy,Schlumberger Earnings Preview: Schlumberger Likely To Beat 2019 Earnings Expectations Despite Shale Slowdown,0.0,0.6369,0.6369,neutral,positive,positive,,review required
+overvalued,2023-06-21,2023-06-21,DIS,Consumer,Get Out Now! 7 Extremely Overvalued Stocks Set to Spiral Downward,0.0,-0.4998,-0.4998,neutral,negative,negative,,review required
+overvalued,2023-06-21,2023-06-21,OXY,Energy,Get Out Now! 7 Extremely Overvalued Stocks Set to Spiral Downward,0.0,-0.4998,-0.4998,neutral,negative,negative,,review required
+downturn,2020-04-27,2020-04-27,CAT,Industrials,"UPDATE: Morgan Stanley Downgrades Caterpillar And United Rentals As Firm Sees 'growing headwinds from a multi-year downturn in Non-Resi Construction, combined with historically weak oil prices and declining mining commodity price'",0.1531,-0.7918,-0.9449,positive,negative,negative,,review required
+downturn,2020-03-13,2020-03-13,AMD,Tech,Advanced Micro Devices Stock Will Survive the Downturn,0.25,-0.2287,-0.4787,positive,negative,negative,,review required
+contraction,2020-05-18,2020-05-18,GS,Financials,India to see annualised contraction of 45% in April to June - Goldman,0.0,-0.3695,-0.3695,neutral,negative,negative,,review required
+contraction,2022-04-18,2022-04-18,T,Comm,Will Top-Line Contraction Affect AT&T's (T) Q1 Earnings?,0.0,-0.3695,-0.3695,neutral,negative,negative,,review required
+antitrust,2023-01-16,2023-01-17,XOM,Energy,"Italy's Antitrust raids Eni, Exxon Mobil's Esso, others over fuel price breaches",0.0,-0.6249,-0.6249,neutral,negative,negative,,review required
+antitrust,2022-05-09,2022-05-09,T,Comm,"Canada's Rogers, Shaw slump on antitrust hurdle to $16 bln deal",0.0,-0.6187,-0.6187,neutral,negative,negative,,review required
+recall,2021-10-25,2021-10-25,WMT,Consumer,Walmart Recalls Certain Room Spray Following Two Deaths,0.2732,-0.0747,-0.3479,positive,negative,negative,,review required
+recall,2022-02-17,2022-02-17,ABT,Healthcare,Abbott recalls certain Similac baby formula made at Michigan facility,0.2732,-0.0747,-0.3479,positive,negative,negative,,review required
+breach,2022-02-14,2022-02-14,NKE,Consumer,"Britain fines JD Sports, Footasylum as CEO meetings breach order",0.0,-0.7041,-0.7041,neutral,negative,negative,,review required
+breach,2023-01-16,2023-01-17,XOM,Energy,"Italy's Antitrust raids Eni, Exxon Mobil's Esso, others over fuel price breaches",0.0,-0.6249,-0.6249,neutral,negative,negative,,review required
+outage,2023-01-11,2023-01-11,WFC,Financials,"FAA Outage Creates Cancellations, Delays",0.2732,-0.2144,-0.48760000000000003,positive,negative,negative,,review required
+outage,2021-04-14,2021-04-14,QCOM,Tech,TSMC says power restored at Taiwan plant after outage,0.34,-0.1406,-0.4806,positive,negative,negative,,review required
+fine_penalty,2020-02-27,2020-02-27,TMUS,Comm,"Federal Communications Commission Set To Proposed Fines For Four US Carriers That Could Top $200M In Total Over Alleged Unauthorized Sale Of Real-Time Location Data From Users; Proposed Fines On AT&T, T-Mobile, Verizon And Sprint",0.2023,-0.5859,-0.7882,positive,negative,negative,,review required
+fine_penalty,2022-02-14,2022-02-14,NKE,Consumer,"Britain fines JD Sports, Footasylum as CEO meetings breach order",0.0,-0.7041,-0.7041,neutral,negative,negative,,review required
+delist,2020-12-01,2020-12-01,MS,Financials,"Delisting renewables company PNE would have a price, says top investor",0.2023,-0.3716,-0.5739,positive,negative,negative,,review required
+delist,2020-05-19,2020-05-19,SBUX,Consumer,Nasdaq informs China's Luckin Coffee it plans to delist it,0.0,-0.5187,-0.5187,neutral,negative,negative,,review required

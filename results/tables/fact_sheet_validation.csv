@@ -1,0 +1,16 @@
+fund_id,fund_name,required_fields_complete,metrics_match_performance_table,latest_date_matches_weights,latest_holdings_match_weights,latest_nonzero_holding_count,latest_weight_sum,status
+combined_equal_weight,Combined Equal Weight,True,True,True,True,60,1.0,pass
+combined_hierarchical_risk_parity,Combined Hierarchical Risk Parity,True,True,True,True,60,1.0,pass
+combined_maximum_sharpe,Combined Maximum Sharpe,True,True,True,True,15,1.000000000000243,pass
+combined_minimum_variance,Combined Minimum Variance,True,True,True,True,23,1.0,pass
+combined_risk_parity,Combined Risk Parity,True,True,True,True,60,0.9999999999999999,pass
+crypto_equal_weight,Crypto Equal Weight,True,True,True,True,10,1.0,pass
+crypto_hierarchical_risk_parity,Crypto Hierarchical Risk Parity,True,True,True,True,10,1.0,pass
+crypto_maximum_sharpe,Crypto Maximum Sharpe,True,True,True,True,5,1.0000000000000044,pass
+crypto_minimum_variance,Crypto Minimum Variance,True,True,True,True,8,1.0000000000000002,pass
+crypto_risk_parity,Crypto Risk Parity,True,True,True,True,10,1.0,pass
+equity_equal_weight,Equity Equal Weight,True,True,True,True,50,1.0,pass
+equity_hierarchical_risk_parity,Equity Hierarchical Risk Parity,True,True,True,True,50,0.9999999999999999,pass
+equity_maximum_sharpe,Equity Maximum Sharpe,True,True,True,True,12,1.0000000000006803,pass
+equity_minimum_variance,Equity Minimum Variance,True,True,True,True,22,1.0000000000000002,pass
+equity_risk_parity,Equity Risk Parity,True,True,True,True,50,1.0,pass

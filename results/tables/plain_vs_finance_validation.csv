@@ -1,0 +1,5 @@
+measure,plain_vader,finance_vader,difference_finance_minus_plain,unit,interpretation_limit
+neutral_headline_share,0.49572311967092536,0.46667710915579286,-0.029046010515132503,proportion,Lower neutrality is not automatically higher classification accuracy.
+neutral_headline_count,72790.0,68525.0,-4265.0,headlines,Every changed case remains reviewable.
+compound_scores_changed,0.0,9481.0,9481.0,headlines,A score change can improve or worsen a case.
+polarity_labels_changed,0.0,5721.0,5721.0,headlines,Labels use the disclosed +/-0.05 threshold.

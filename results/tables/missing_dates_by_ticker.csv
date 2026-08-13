@@ -1,0 +1,61 @@
+dataset,ticker,calendar_basis,expected_dates,observed_dates,missing_dates,coverage_pct
+equity_prices,ABBV,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,ABT,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,ADBE,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,AEP,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,AMD,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,AMGN,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,AMT,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,BA,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,CAT,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,CCI,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,CMCSA,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,COP,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,CVX,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,D,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,DD,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,DIS,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,DOW,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,DUK,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,EA,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,GE,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,GILD,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,GS,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,INTC,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,KO,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,MMM,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,MRK,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,MS,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,NEE,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,NEM,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,NKE,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,NUE,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,NVDA,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,O,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,OXY,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,PLD,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,PSA,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,QCOM,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,SBUX,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,SHW,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,SLB,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,SO,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,T,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,TMUS,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,TTWO,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,UPS,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,USB,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,V,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,WFC,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,WMT,shared observed equity trading calendar,1006,1006,0,100.0
+equity_prices,XOM,shared observed equity trading calendar,1006,1006,0,100.0
+crypto_prices,ADA-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,BCH-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,BTC-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,EOS-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,ETC-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,ETH-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,LTC-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,TRX-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,XLM-USD,daily calendar,1461,1461,0,100.0
+crypto_prices,XRP-USD,daily calendar,1461,1461,0,100.0

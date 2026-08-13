@@ -1,0 +1,24 @@
+dataset,column_position,column,dtype,missing_count,missing_pct,definition,transformation
+equity_prices,1,ticker,str,0,0.0,Asset ticker supplied by the course dataset.,source field retained
+equity_prices,2,date,datetime64[ns],0,0.0,Timezone-naive observation date at midnight.,converted to timezone-naive midnight date
+equity_prices,3,open,float64,0,0.0,Unadjusted opening price in quoted currency.,source field retained
+equity_prices,4,high,float64,0,0.0,Unadjusted daily high price in quoted currency.,source field retained
+equity_prices,5,low,float64,0,0.0,Unadjusted daily low price in quoted currency.,source field retained
+equity_prices,6,close,float64,0,0.0,Unadjusted closing price in quoted currency.,source field retained
+equity_prices,7,adjClose,float64,0,0.0,Adjusted closing price used for return calculations.,source field retained
+equity_prices,8,volume,int64,0,0.0,Reported daily trading volume; units follow the source dataset.,source field retained
+equity_prices,9,sector,str,0,0.0,Course-provided equity sector classification.,source field retained
+crypto_prices,1,ticker,str,0,0.0,Asset ticker supplied by the course dataset.,source field retained
+crypto_prices,2,date,datetime64[ns],0,0.0,Timezone-naive observation date at midnight.,converted to timezone-naive midnight date
+crypto_prices,3,open,float64,0,0.0,Unadjusted opening price in quoted currency.,source field retained
+crypto_prices,4,high,float64,0,0.0,Unadjusted daily high price in quoted currency.,source field retained
+crypto_prices,5,low,float64,0,0.0,Unadjusted daily low price in quoted currency.,source field retained
+crypto_prices,6,close,float64,0,0.0,Unadjusted closing price in quoted currency.,source field retained
+crypto_prices,7,adjClose,float64,0,0.0,Adjusted closing price used for return calculations.,source field retained
+crypto_prices,8,volume,int64,0,0.0,Reported daily trading volume; units follow the source dataset.,source field retained
+news_headlines,1,date,datetime64[ns],0,0.0,Timezone-naive observation date at midnight.,converted to timezone-naive midnight date
+news_headlines,2,ticker,str,0,0.0,Asset ticker supplied by the course dataset.,source field retained
+news_headlines,3,sector,str,0,0.0,Course-provided equity sector classification.,source field retained
+news_headlines,4,title,str,0,0.0,"Original headline text, preserved without text cleaning.",original text preserved
+news_headlines,5,url,str,0,0.0,Source URL supplied with the headline.,source field retained
+news_headlines,6,publisher,str,137447,93.6058,Publisher supplied with the headline; blank values are missing.,blank strings represented as missing

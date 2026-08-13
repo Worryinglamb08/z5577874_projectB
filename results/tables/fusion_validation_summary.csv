@@ -1,0 +1,11 @@
+check,status,detail
+coverage_adjusted_identity,pass,required Phase 5 identity satisfied
+lag_is_previous_observed_sector_day,pass,required Phase 5 identity satisfied
+signal_source_precedes_rebalance,pass,required Phase 5 identity satisfied
+weights_fully_invested,pass,required Phase 5 identity satisfied
+weights_long_only,pass,required Phase 5 identity satisfied
+individual_cap_respected,pass,required Phase 5 identity satisfied
+equity_only_assets,pass,required Phase 5 identity satisfied
+base_daily_path_identity,pass,required Phase 5 identity satisfied
+four_primary_variants,pass,required Phase 5 identity satisfied
+metrics_are_finite,pass,required Phase 5 identity satisfied

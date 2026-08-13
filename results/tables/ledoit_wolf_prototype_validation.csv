@@ -1,0 +1,12 @@
+check,observed_value,pass_rule,status
+prototype_path_count,18.0,equal 18,pass
+prototype_rebalance_count,648.0,equal 648,pass
+invalid_path_rebalance_count,0.0,equal 0,pass
+solver_failure_count,0.0,equal 0,pass
+temporal_order_violations,0.0,equal 0,pass
+maximum_weight_sum_residual,5.400280223000209e-11,maximum 1e-07,pass
+maximum_bound_residual,0.0,maximum 1e-07,pass
+nonpositive_covariance_eigenvalue_count,0.0,equal 0,pass
+invalid_ledoit_wolf_shrinkage_count,0.0,equal 0,pass
+sample_input_condition_mismatch_count,0.0,equal 0,pass
+ledoit_conditioning_nonimprovement_count,0.0,equal 0,pass

@@ -1,0 +1,9 @@
+check,status,detail
+headline_key_unique,pass,required identity satisfied
+all_aligned_headlines_indexed,pass,required identity satisfied
+ticker_day_key_unique,pass,required identity satisfied
+sector_day_key_unique,pass,required identity satisfied
+no_news_ticker_scores_are_zero,pass,required identity satisfied
+sector_index_is_equal_weight_ticker_mean,pass,required identity satisfied
+lag_is_previous_observed_sector_day,pass,required identity satisfied
+scores_are_bounded,pass,required identity satisfied

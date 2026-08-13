@@ -1,0 +1,4 @@
+dataset,source,raw_rows,clean_rows,rows_removed,date_start,date_end,frequency,ticker_count,sector_count,calendar_coverage_pct,coverage_basis,transformations
+equity_prices,Course-hosted project_data.zip via src/data_access.py,50300,50300,0,2020-01-02,2023-12-29,equity trading days,50,10,100.0,shared observed equity trading calendar by ticker,deep copy; date normalisation; cap at 2023-12-31; validation; stable sort
+crypto_prices,Course-hosted project_data.zip via src/data_access.py,14620,14610,10,2020-01-01,2023-12-31,calendar days,10,,100.0,daily calendar by ticker,deep copy; date normalisation; cap at 2023-12-31; validation; stable sort
+news_headlines,Course-hosted project_data.zip via src/data_access.py,149683,146836,2847,2020-01-01,2023-12-31,event-driven headlines,50,10,,ticker and sector universe; no daily-completeness assumption,deep copy; date normalisation; cap; publisher blanks to missing; deduplicate ticker-date-title; stable sort

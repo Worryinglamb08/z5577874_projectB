@@ -1,0 +1,3 @@
+panel,row_count,key,date_count,entity_count,headline_count,zero_news_rows,nonzero_confidence_rows,mean_coverage_confidence,purpose
+ticker_day,50300,"date,ticker",1006,50,146830,12338,,,ticker-first text aggregation and no-news policy
+sector_day,10060,"date,sector",1006,10,146830,228,9353,0.624248178430206,coverage confidence and later sector sentiment index

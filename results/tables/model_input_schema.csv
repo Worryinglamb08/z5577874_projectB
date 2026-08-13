@@ -1,0 +1,4 @@
+dataset,unit_of_observation,row_count,column_count,date_start,date_end,calendar,source,transformation,purpose
+equity_returns,ticker-date,50300,10,2020-01-02,2023-12-29,observed equity trading days,clean Project B frames from src/etl.py,Adjusted-close simple returns calculated within equity ticker.,Phase 2 walk-forward portfolio model input
+crypto_returns_native,ticker-date,14610,9,2020-01-01,2023-12-31,native seven-day calendar,clean Project B frames from src/etl.py,Adjusted-close simple returns calculated within crypto ticker.,Phase 2 walk-forward portfolio model input
+combined_returns,date,1006,61,2020-01-02,2023-12-29,observed equity trading days,clean Project B frames from src/etl.py,Native returns pivoted wide; crypto left-aligned without filling.,Phase 2 walk-forward portfolio model input

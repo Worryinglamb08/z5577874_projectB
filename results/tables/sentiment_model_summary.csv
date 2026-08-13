@@ -1,0 +1,14 @@
+metric,value,unit
+clean_headlines_scored,146836.0,rows
+aligned_headlines_indexed,146830.0,rows
+unaligned_post_sample_headlines,6.0,rows
+plain_neutral_headlines,72790.0,rows
+plain_neutral_share,0.49572311967092536,proportion
+finance_neutral_headlines,68525.0,rows
+finance_neutral_share,0.46667710915579286,proportion
+finance_score_changed,9481.0,rows
+sentiment_label_changed,5721.0,rows
+sector_index_rows,10060.0,rows
+sector_count,10.0,sectors
+equity_date_count,1006.0,dates
+sector_days_without_news,228.0,rows

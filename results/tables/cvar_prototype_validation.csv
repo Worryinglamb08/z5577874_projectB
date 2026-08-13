@@ -1,0 +1,9 @@
+check,observed_value,pass_rule,status
+prototype_path_count,9.0,equal 9,pass
+cvar_path_count,3.0,equal 3,pass
+solver_failure_count,0.0,equal 0,pass
+temporal_order_violations,0.0,equal 0,pass
+maximum_weight_sum_residual,2.2726265314076954e-13,maximum 1e-07,pass
+maximum_bound_residual,0.0,maximum 1e-07,pass
+cvar_confidence_mismatch_count,0.0,equal 0,pass
+nonfinite_cvar_objective_count,0.0,equal 0,pass
