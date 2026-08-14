@@ -198,6 +198,8 @@ def test_overview_explains_methods_after_asset_families() -> None:
     ):
         assert f"<h3>{allocation_label}</h3>" in rendered_cards
     assert "Combine two to four Stockist funds" in rendered_cards
+    assert "S&amp;P 500 (SPY) or Nasdaq Composite (ONEQ) benchmarks" in rendered_cards
+    assert "alongside the estimated product fee" not in rendered_cards
     assert any(button.label == "Open allocation lab" for button in app.button)
     for inspect_label in (
         "Performance &amp; risk",

@@ -490,7 +490,8 @@ def _overview(artifacts: AppArtifacts, catalog: pd.DataFrame) -> None:
         ),
         (
             "Measure the historical outcome",
-            "Compare return, volatility, Sharpe ratio, drawdown and the estimated product fee.",
+            "Compare return, volatility, Sharpe ratio and drawdown against S&amp;P 500 "
+            "(SPY) or Nasdaq Composite (ONEQ) benchmarks.",
         ),
     )
     allocation_cards = "".join(

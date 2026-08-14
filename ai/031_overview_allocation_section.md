@@ -10,7 +10,8 @@ explanations on the Overview page.
 - Added the requested introduction explaining that two to four Stockist funds
   can be combined into a hypothetical portfolio.
 - Added three equal cards covering fund weights, combined exposure and the
-  historical outcome.
+  historical outcome, including comparison against the app's S&P 500 (SPY) and
+  Nasdaq Composite (ONEQ) benchmark options.
 - Added a secondary `Open allocation lab` action that navigates directly to the
   working allocation tool.
 - Kept the three cards in one desktop row and stacked them on narrow screens.

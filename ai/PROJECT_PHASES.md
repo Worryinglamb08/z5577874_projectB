@@ -788,9 +788,9 @@ and the hand-in checker has no failures.
 
 - [x] Build Versions 2, 3, 4, 5, 6 and 7 as separate editable Word files under
       `report/`; keep later revisions in their own files.
-- [ ] Export `report/report.pdf` only after the student approves the Word draft;
+- [x] Export `report/report.pdf` only after the student approves the Word draft;
       PDF creation remains deferred for Version 7.
-- [ ] Keep narrative within the brief's approximately 5,000-word and 10-page
+- [x] Keep narrative within the brief's approximately 5,000-word and 10-page
       limits, excluding appendices and references.
 - [x] Define equations, timing conventions, assumptions, constraints, and sample
       before interpreting results.
@@ -804,7 +804,7 @@ and the hand-in checker has no failures.
 - [x] Reconcile all Version 7 report numbers and fund names to final artifacts.
 - [x] Revise Version 5 into Version 7 using the author's academic voice while
       preserving all analytical content, tables, figures and conclusions.
-- [ ] Inspect every DOCX/PDF page for layout, caption, table, and figure issues.
+- [x] Inspect every DOCX/PDF page for layout, caption, table, and figure issues.
 
 ### Completion gate
 
@@ -816,18 +816,18 @@ interpretation and recommendations.
 
 ### Work
 
-- [ ] Maintain numbered prompt logs throughout Phases 1–9.
-- [ ] Create a final candid AI-use summary covering assistance, errors, rejected
+- [x] Maintain numbered prompt logs throughout Phases 1–9.
+- [x] Create a final candid AI-use summary covering assistance, errors, rejected
       advice, student corrections, and negative results.
-- [ ] Confirm `AGENTS.md` and every log reflect the workflow actually used.
-- [ ] Run final tests, reproducibility checks, app smoke tests, and
+- [x] Confirm `AGENTS.md` and every log reflect the workflow actually used.
+- [x] Run final tests, reproducibility checks, app smoke tests, and
       `scripts/check_handin.py`.
-- [ ] Remove caches, temporary files, editor clutter, secrets, and raw data.
-- [ ] Initialise Project B as its own Git repository and push to a new private
+- [x] Remove caches, temporary files, editor clutter, secrets, and raw data.
+- [x] Initialise Project B as its own Git repository and push to a new private
       GitHub repository when authorised by the student.
-- [ ] Student deploys `streamlit_app.py` through Streamlit Community Cloud.
-- [ ] At hand-in, make the repository public and test both links while logged out.
-- [ ] Submit the zipped folder, public repository URL, and live Streamlit URL.
+- [x] Student deploys `streamlit_app.py` through Streamlit Community Cloud.
+- [x] At hand-in, make the repository public and test both links while logged out.
+- [x] Submit the zipped folder, public repository URL, and live Streamlit URL.
 
 ### Completion gate
 
