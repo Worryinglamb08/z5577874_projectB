@@ -1,136 +1,239 @@
-# FinTech Project - Part B
+<p align="center">
+  <img src="assets/stockist_spartan_logo.png" alt="Stockist Funds Spartan logo" width="110">
+</p>
 
-## Current build status
+<h1 align="center">Stockist Funds</h1>
 
-Phases 1 through 8 are implemented and verified. The Phase 7 Streamlit app is
-built and locally verified; its fresh-user comprehension review remains open.
-Phase 4's lexicon and selected
-headline cases still require the student's report-level review. `scripts/run_part_b.py` rebuilds and verifies the
-local data foundation and the 15 primary monthly walk-forward funds, then exports
-their app-readable returns and weights, fact-sheet metrics, diagnostics, and core
-report figures. The build also downloads adjusted SPY and ONEQ histories and
-exports them as optional S&P 500 and Nasdaq Composite market-reference artifacts. It
-The previously completed daily/every-5-day/every-10-day/monthly frequency and
-5/10/25 basis-point cost comparisons remain as frozen research evidence; the
-routine build validates and preserves those values instead of rerunning their
-slow diagnostic optimisations. It then scores plain and finance-
-adjusted VADER sentiment, and exports the leakage-safe ticker-equal-weight sector
-index and its report exhibit. It then applies the one-day-lagged, coverage-aware
-finance signal to the otherwise-identical Equity Minimum Variance fund, exports
-the before-versus-after evidence, and retains the observed underperformance.
-Finally, it exports the coverage-confidence diagnostic, reconciles all 15 fund
-fact sheets, catalogs nine report exhibits, and traces nine candidate findings
-to machine-readable source artifacts. Phase 8 validates 75 canonical artifacts,
-writes a timestamp-free SHA-256 manifest, and can compare two monthly-only builds
-byte for byte.
-The app reads only committed precomputed artifacts and never loads raw data,
-scores VADER, or reruns the portfolio models at interaction time.
+<p align="center">
+  Inspectable systematic investing across equities and crypto.
+</p>
 
-An isolated **Effective Number of Bets** prototype is also available. It uses
-PCA-orthogonal risk contributions to compare an experimental Factor
-Diversification rule with Risk Parity under the same monthly walk-forward
-design. It does not add Factor Diversification to the approved menu or app. Run
-`python scripts/run_effective_bets_prototype.py`; its six prototype artifacts
-are written under `results/data/` and `results/tables/`.
+<p align="center">
+  <a href="https://z5577874projectb.streamlit.app/?view=Overview"><strong>Launch the app</strong></a>
+  ·
+  <a href="report/report.pdf"><strong>Read the report</strong></a>
+  ·
+  <a href="https://github.com/Worryinglamb08/z5577874_projectB"><strong>Public repository</strong></a>
+</p>
 
-An isolated **Risk-Parity Black-Litterman sentiment** prototype is available as
-well. It reverse-optimises the existing monthly Equity Risk-Parity weights,
-uses lagged finance sentiment for sector-basket views, and uses lagged coverage
-only to scale view uncertainty. The 1%, 2%, and 4% annual view-scale paths are
-exploratory and remain outside the app. Run
-`python scripts/run_black_litterman_prototype.py`; its six prototype artifacts
-are also written under `results/data/` and `results/tables/`.
+Stockist Funds is an educational FINS5545 prototype for self-directed investors
+who want systematic portfolios with inspectable evidence. It turns the supplied
+2020–2023 equity, cryptocurrency, and headline data into 15 monthly funds,
+complete fact sheets, a hypothetical allocation lab, and a coverage-aware news
+signal experiment.
 
-**Hierarchical Risk Parity (HRP)** is now the fifth primary monthly method,
-expanding the product to 15 funds. It uses single-linkage correlation clustering
-and recursive variance bisection, recording any projection needed to satisfy
-the approved asset and crypto-sleeve caps. The original controlled comparison
-can still be reproduced with `python scripts/run_hrp_prototype.py`; its six
-diagnostic artifacts are written under `results/data/` and `results/tables/`.
+The deployed app reads committed, precomputed artifacts. It does not download
+raw data, optimise portfolios, or run VADER during an app interaction.
 
-An isolated **95% minimum-CVaR** prototype compares historical Expected
-Shortfall minimisation with Minimum Variance and HRP across all three asset
-families. It uses the same monthly walk-forward dates, constraints and 10 bp
-cost assumption, but it does not change the 15-fund menu or app. Run
-`python scripts/run_cvar_prototype.py`; the prototype CSVs are written under
-`results/data/` and `results/tables/`, with a validated comparison figure under
-`results/figures/`.
+## What the project delivers
 
-> FIRST: rename this folder to <yourZID>_projectB (for example z1234567_projectB)
-> and move it into fins-agent/fins2026/. The folder name carrying your zID is your
-> submission.
+- **15 monthly funds:** Equity, Crypto, and Combined families, each available
+  through five portfolio-construction methods.
+- **Walk-forward evidence:** prior-only estimation, explicit first-live dates,
+  family-specific calendars, turnover, transaction costs, and leakage tests.
+- **Complete fact sheets:** growth of $1, return, volatility, Sharpe ratio,
+  drawdown, holdings, sector allocation, concentration, and rebalance changes.
+- **Fund comparison:** up to five funds with Same-family Equal Weight, S&P 500
+  (SPY), or Nasdaq Composite (ONEQ) benchmark options.
+- **Allocation lab:** a hypothetical monthly mix with look-through exposures,
+  overlap, correlation, drawdown, and a fixed 0.12% product-fee illustration.
+- **News analytics:** plain and finance-adjusted VADER, sector sentiment,
+  coverage confidence, a fear-and-greed view, and a measured fusion experiment.
+- **Inspectable outputs:** app-readable CSVs, report tables, figures,
+  validation summaries, captions, and a reproducibility manifest.
 
-Part B: funds, sentiment, and the app (DFF Stations 3-4). This folder is also your
-public GitHub repository; the app entrypoint is streamlit_app.py at the root.
+## Evidence at a glance
 
-## How to run
+| Item | Evidence |
+|---|---:|
+| Primary funds | 15 |
+| Asset families | Equity, Crypto, Combined |
+| Portfolio methods | 5 |
+| Monthly decisions per fund | 36 |
+| Out-of-sample evaluation | 2021–2023 |
+| Clean headlines scored | 146,836 |
+| Equity-sector indices | 10 |
+| Canonical reproducible artifacts | 76 |
+| Automated tests | 144 |
 
-    pip install -r requirements.txt -r requirements-dev.txt   # dev adds VADER + benchmark fetch
-    python -m nltk.downloader vader_lexicon  # one-time local build resource
-    python scripts/run_part_b.py            # rebuilds monthly funds and core evidence
-    python scripts/check_reproducibility.py # optional: builds twice and compares hashes
-    python -m pytest -q                     # runs all 138 tests
-    python -m ruff check .                  # checks the full project
-    streamlit run streamlit_app.py          # runs the app locally
+Three results shape the product rather than a simple performance ranking:
 
-`run_part_b.py` intentionally does not recompute the faster-schedule experiment.
-Its committed comparison tables and figure are preserved and validated as frozen
-diagnostic evidence; monthly remains the only routine walk-forward product build.
+- **Combined Risk Parity** has the strongest combined-fund Sharpe ratio at
+  `0.883`, with 13.9% annualised return, 16.2% volatility, and a 19.5% maximum
+  drawdown.
+- **Combined Equal Weight** returns 15.0% annually but has higher 21.6%
+  volatility and a deeper 27.9% maximum drawdown.
+- The fixed **coverage-aware finance-sentiment tilt does not improve** Equity
+  Minimum Variance. Sharpe falls from `0.504` to `0.453`, return falls from 5.67%
+  to 5.01%, and cumulative turnover rises from `5.23` to `5.96`; maximum
+  drawdown becomes 0.77 percentage points shallower. The negative result is
+  retained rather than tuned away.
+
+The finance lexicon changes 9,481 headline scores and reduces the neutral share
+from 49.57% to 46.67%. Lower neutrality is not treated as proof of better
+classification or return predictability.
+
+## Fund menu
+
+Every method is applied to Equity, Crypto, and Combined assets, producing one
+fact sheet per `(family, method)` fund.
+
+| Method | Role in the menu |
+|---|---|
+| Equal Weight | Transparent baseline that divides capital evenly across eligible assets. |
+| Minimum Variance | Seeks the lowest estimated portfolio volatility from trailing covariance. |
+| Risk Parity | Spreads estimated portfolio risk so one asset does not dominate it. |
+| Maximum Sharpe | Seeks the highest estimated excess return per unit of volatility; explicitly labelled as estimation-sensitive. |
+| Hierarchical Risk Parity | Clusters assets that moved similarly and allocates recursively across risk clusters. |
+
+HRP was promoted after a controlled prototype. Other researched methods remain
+documented experiments rather than being added merely because they produced a
+different historical path.
+
+## Backtest and signal design
+
+The primary specification is monthly and walk-forward:
+
+- 252-observation trailing windows for Equity and Combined funds;
+- a 365-observation native-calendar window for Crypto funds;
+- weights formed strictly from observations before the first return earned;
+- 252-day Equity/Combined and 365-day Crypto annualisation;
+- adjusted-close returns, capped at 31 December 2023;
+- long-only, fully invested portfolios;
+- 10% equity asset cap, 25% crypto asset cap, and 30% Combined crypto-sleeve cap;
+- 0% annual risk-free rate; and
+- 10 basis points of one-way trading cost applied to drift-aware turnover.
+
+The sentiment index averages headlines within ticker-day, assigns zero to
+no-news ticker-days without carrying stale sentiment, and then equal-weights the
+five constituent ticker scores in each sector. Every tradable signal is lagged
+by one observed equity trading day. Coverage confidence combines constituent
+breadth and headline concentration; it describes evidence support, not model
+accuracy.
+
+Daily, every-5-day, and every-10-day rebalance schedules and 5/10/25 basis-point
+cost cases are retained as frozen sensitivity evidence. Monthly remains the
+only primary product specification regenerated by the routine build.
 
 ## Investor journey
 
-The sidebar provides five investor-focused destinations:
+The sidebar provides five destinations:
 
-1. **Overview** — product purpose, systematic process, fund families, portfolio
-   methods, an allocation-lab route, and inspectable evidence categories.
-2. **Compare funds** — up to five selected monthly funds, a switchable
-   equal-weight, S&P 500 or Nasdaq Composite benchmark, and secondary filters
-   that remove non-matching selections and update the comparison evidence.
-3. **Fund details** — one complete fact sheet with a switchable benchmark and
-   aligned growth comparison, drawdown, dated holdings, turnover, concentration,
-   costs, allocation-through-time bands, and latest weight changes.
-4. **Allocation lab** — a hypothetical monthly mix with portfolio risk,
-   a switchable equal-fund, SPY or ONEQ benchmark, look-through exposure,
-   crypto share, correlation, overlap, and a fixed-fee illustration using the
-   code-configured 0.12% annual product fee.
-5. **News signal** — finance sentiment, coverage confidence, positive-but-thin
-   evidence, plain-VADER comparison, and the measured fusion result.
+1. **Overview** explains the product, systematic process, asset families,
+   methods, allocation workflow, and inspectable evidence.
+2. **Compare funds** aligns selected funds and benchmarks across common dates,
+   with family and method controls presented as filters.
+3. **Fund details** provides one complete fact sheet, current holdings, sector
+   allocation, allocation history, and latest target-weight changes.
+4. **Allocation lab** combines selected fund return histories into a
+   hypothetical monthly allocation without presenting it as advice.
+5. **News signal** separates sentiment level, standardized movement, coverage
+   support, finance-lexicon effects, and the fusion result.
 
-Detailed model configuration, frequency diagnostics, equations, artifact
-validation and reproducibility evidence are retained in the project outputs and
-report rather than exposed as a customer-facing app destination.
+Important selections are URL-shareable through `view`, `fund`, `benchmark`,
+`allocation_benchmark`, and `sector` query parameters.
 
-Important selections are URL-shareable with `?view=`, `?fund=`, `?benchmark=`,
-`?allocation_benchmark=`, and `?sector=`.
+## Run the app locally
 
-Load raw data through src/data_access.py (see context/DATA_GUIDE.md); never commit
-raw data. The deployed app, by contrast, reads your precomputed artifacts from
-results/ - those ARE committed.
+The project targets Python 3.13. From a clean clone:
 
-## What is here
+```bash
+git clone https://github.com/Worryinglamb08/z5577874_projectB.git
+cd z5577874_projectB
+python3.13 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
 
-- streamlit_app.py    the app entrypoint (repo root)
-- .streamlit/         app config
-- PROJECT_BRIEF.md    the full assignment brief for your course (read this first)
-- src/                your code (data_access is provided; portfolios/sentiment/fusion are yours)
-- scripts/            runnable scripts that reproduce your results
-- results/            your outputs: figures in results/figures/, tables in results/tables/, app data artifacts in results/data/
-- context/            provided data guide and project context (do not edit)
-- report/             your report - see report/OUTLINE.md (author in Word, submit report.pdf)
-- ai/                 your prompt logs and AI notes
-- requirements-dev.txt build/repro-only deps (nltk and yfinance); keep them out of the deployed app
-- AGENTS.md / CLAUDE.md   replace the stub for your tool (you need just one) with your own
+On Windows, activate the environment with `.venv\Scripts\activate` instead.
+The app starts from the repository root and uses only committed files under
+`results/`.
 
-## Deploy + hand in
+## Rebuild and validate the analysis
 
-This folder is its own GitHub repo, independent of fins-agent. Your AI agent can run
-the check and push the repo; the browser deploy is yours (it needs your login). See
-PROJECT_BRIEF.md Appendix D and docs/STUDENT_DEPLOY.md (in this folder). In short:
+Install the build and test dependencies, then download VADER's one-time lexical
+resource:
 
-    python scripts/check_handin.py        # your agent can run this
-    # commit your precomputed app artifacts under results/ (the app reads them)
-    # git init in this folder, then push the contents to a NEW private GitHub repo
+```bash
+python -m pip install -r requirements.txt -r requirements-dev.txt
+python -m nltk.downloader vader_lexicon
+```
 
-Then YOU connect the repo on share.streamlit.io (entrypoint streamlit_app.py). At
-hand-in, make the repo PUBLIC, submit the live URL + repo link, and also zip this
-whole folder and upload the zip to Moodle.
+Run the deterministic monthly build and validation suite:
+
+```bash
+python scripts/run_part_b.py
+python scripts/check_reproducibility.py
+python -m pytest -q
+python -m ruff check .
+python scripts/check_handin.py
+```
+
+`scripts/run_part_b.py` loads the hosted course data through
+`src/data_access.py`, rebuilds the 15 primary funds and core sentiment/fusion
+evidence, validates the frozen frequency experiment, and writes a timestamp-free
+SHA-256 artifact manifest. `scripts/check_reproducibility.py` performs two builds
+and compares their canonical artifact hashes.
+
+## Experimental research
+
+These controlled prototypes are retained as evidence but are not silently added
+to the investor-facing menu:
+
+| Experiment | Product decision |
+|---|---|
+| Effective Number of Bets | Kept as an isolated factor-diversification experiment. |
+| Risk-Parity Black–Litterman | Kept outside the menu after the tested sentiment views did not justify promotion. |
+| Ledoit–Wolf covariance shrinkage | Conditioning improved, but economic effects were mixed and did not support asset-family-specific adoption. |
+| Minimum CVaR | Distinct from Minimum Variance but did not provide a stronger defensive role in this sample. |
+| Faster rebalance schedules | Retained as turnover and cost sensitivities, not primary investable funds. |
+
+Prototype entrypoints are under `scripts/run_*_prototype.py`; their outputs are
+stored separately from the primary app artifacts.
+
+## Repository structure
+
+```text
+streamlit_app.py       Root Streamlit entrypoint
+.streamlit/            Theme and deployment configuration
+assets/                Stockist visual assets
+src/                   Portfolio, sentiment, fusion, app, and validation logic
+scripts/               Build, prototype, reproducibility, and hand-in commands
+tests/                 Synthetic, real-data, leakage, app, and smoke tests
+results/data/          App-readable derived datasets
+results/tables/        Metrics, diagnostics, validations, and evidence tables
+results/figures/       Self-contained report figures and caption sidecars
+report/report.pdf      Final Project B report
+ai/                    Agent instructions, prompt logs, review records, and AI Notes
+context/               Supplied project context and data guide
+```
+
+## Data boundaries and limitations
+
+- The supplied sample ends in 2023; the 2021–2023 out-of-sample period is short
+  and includes only a limited set of market regimes.
+- SPY and ONEQ adjusted-close histories are investable ETF proxies, not the
+  official S&P 500 or Nasdaq Composite index series.
+- Crypto trades seven days per week. Combined funds act on the observed equity
+  calendar, while Crypto-only funds retain the native calendar.
+- The 10-basis-point cost is a transparent modelling assumption, not an
+  execution quote or proprietary trading-cost estimate.
+- The news data contain headlines, not article bodies. VADER and a token-level
+  finance lexicon can misread context, repetition, and mixed-language headlines.
+- Coverage confidence measures breadth and concentration of news support; it
+  does not establish sentiment accuracy.
+- Historical optimisation and backtested performance are not forecasts or
+  personal financial advice.
+
+## AI workflow and reproducibility evidence
+
+AI assisted planning, research, modelling, testing, app development, figures,
+and early report drafting. Its outputs were treated as starting points and were
+checked through tests, artifact reconciliation, visual review, and student
+decisions. The process is documented in [`AGENTS.md`](AGENTS.md),
+[`ai/AI_Notes.md`](ai/AI_Notes.md), and the numbered prompt logs under `ai/`.
+
+The final mechanical hand-in check passes without failures. The full test suite
+contains 144 tests, and the latest reproducibility check confirms 76 canonical
+artifacts are byte-identical across builds.
