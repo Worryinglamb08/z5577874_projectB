@@ -81,8 +81,9 @@ diagnostic evidence; monthly remains the only routine walk-forward product build
 
 The sidebar provides five investor-focused destinations:
 
-1. **Overview** — product purpose, systematic process, families, and evidence status.
-2. **Compare funds** — up to four selected monthly funds, a switchable
+1. **Overview** — product purpose, systematic process, fund families, portfolio
+   methods, an allocation-lab route, and inspectable evidence categories.
+2. **Compare funds** — up to five selected monthly funds, a switchable
    equal-weight, S&P 500 or Nasdaq Composite benchmark, and secondary filters
    that remove non-matching selections and update the comparison evidence.
 3. **Fund details** — one complete fact sheet with a switchable benchmark and

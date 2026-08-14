@@ -73,7 +73,8 @@ def test_every_investor_view_renders(view: str, expected_text: str) -> None:
         for element in collection
     )
     assert expected_text in rendered_text
-    assert "Historical out-of-sample simulation" in rendered_text
+    removed_strip = "Historical out-of-sample simulation · Monthly primary specification"
+    assert removed_strip not in rendered_text
 
 
 def test_overview_compare_button_navigates_without_mutating_rendered_widget() -> None:
@@ -168,7 +169,7 @@ def test_overview_explains_methods_after_asset_families() -> None:
     subheaders = [subheader.value for subheader in app.subheader]
     assert subheaders.index("Choose an asset family before choosing a method") < (
         subheaders.index("Choose a portfolio method")
-    ) < subheaders.index("What makes the evidence inspectable")
+    ) < subheaders.index("Build an allocation") < subheaders.index("What you can inspect")
     rendered_cards = "\n".join(str(markdown.value) for markdown in app.markdown)
     assert rendered_cards.count('class="step-grid"') == 1
     assert rendered_cards.count('class="step-card"') == 4
@@ -177,6 +178,11 @@ def test_overview_explains_methods_after_asset_families() -> None:
     assert rendered_cards.count('class="card-chips"') == 3
     assert rendered_cards.count('class="method-grid"') == 1
     assert rendered_cards.count('class="stockist-card method-card"') == 5
+    assert rendered_cards.count('class="allocation-overview-grid"') == 1
+    assert rendered_cards.count('class="stockist-card allocation-overview-card"') == 3
+    assert rendered_cards.count('class="inspect-grid"') == 1
+    assert rendered_cards.count('class="stockist-card inspect-card"') == 4
+    assert ".inspect-grid { display:grid; grid-template-columns:repeat(4" in rendered_cards
     for method_label in (
         "Equal Weight",
         "Minimum Variance",
@@ -185,6 +191,40 @@ def test_overview_explains_methods_after_asset_families() -> None:
         "Hierarchical Risk Parity",
     ):
         assert f"<h3>{method_label}</h3>" in rendered_cards
+    for allocation_label in (
+        "Set fund weights",
+        "See the combined exposure",
+        "Measure the historical outcome",
+    ):
+        assert f"<h3>{allocation_label}</h3>" in rendered_cards
+    assert "Combine two to four Stockist funds" in rendered_cards
+    assert any(button.label == "Open allocation lab" for button in app.button)
+    for inspect_label in (
+        "Performance &amp; risk",
+        "Portfolio construction",
+        "Implementation",
+        "News signal experiment",
+    ):
+        assert f"<h3>{inspect_label}</h3>" in rendered_cards
+    assert "coverage-aware sentiment tilt" in rendered_cards
+
+
+def test_overview_allocation_button_opens_allocation_lab() -> None:
+    pytest.importorskip("streamlit.testing.v1")
+    from streamlit.testing.v1 import AppTest
+
+    app = AppTest.from_file(PROJECT_ROOT / "streamlit_app.py", default_timeout=30)
+    app.query_params["view"] = "Overview"
+    app.run()
+
+    allocation_button = next(
+        button for button in app.button if button.label == "Open allocation lab"
+    )
+    allocation_button.click().run()
+
+    assert not app.exception, f"Allocation navigation raised: {app.exception}"
+    assert app.session_state["stockist_view"] == "Allocation lab"
+    assert any(title.value == "Allocation lab" for title in app.title)
 
 
 def test_removed_methods_route_falls_back_to_overview() -> None:
@@ -336,7 +376,7 @@ def test_compare_filters_remove_selected_funds_that_no_longer_match() -> None:
         "equity_minimum_variance",
         "combined_risk_parity",
     ]
-    assert app.multiselect[0].max_selections == 4
+    assert app.multiselect[0].max_selections == 5
     chart_titles = [
         json.loads(chart.proto.spec)["layout"]["title"]["text"]
         for chart in app.get("plotly_chart")
@@ -346,15 +386,16 @@ def test_compare_filters_remove_selected_funds_that_no_longer_match() -> None:
         "How did return and volatility compare?",
     ]
 
-    four_funds = [
+    five_funds = [
         "equity_minimum_variance",
         "combined_risk_parity",
         "crypto_equal_weight",
         "equity_maximum_sharpe",
+        "combined_hierarchical_risk_parity",
     ]
-    app.multiselect[0].set_value(four_funds).run()
-    assert not app.exception, f"Four-fund comparison raised: {app.exception}"
-    assert app.multiselect[0].value == four_funds
+    app.multiselect[0].set_value(five_funds).run()
+    assert not app.exception, f"Five-fund comparison raised: {app.exception}"
+    assert app.multiselect[0].value == five_funds
 
     filters = app.get("button_group")
     filters[0].set_value(["equity"])

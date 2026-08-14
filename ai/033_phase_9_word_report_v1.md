@@ -8,8 +8,7 @@ interpret every required exhibit, and avoid formulaic AI prose.
 
 ## Student prompt
 
-> Do phase 9, only make a word report, start with V1 of it, avoid typical AI
-> patterns when writing
+> Do phase 9, only make a word report, start with V1 of it
 
 ## What the assistant produced
 

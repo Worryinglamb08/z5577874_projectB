@@ -188,18 +188,11 @@ Every page begins with:
 
 1. page title;
 2. one-sentence purpose;
-3. a persistent evidence strip; and
-4. any page-level filters.
+3. any page-level filters.
 
-Default evidence-strip wording:
-
-```text
-Historical out-of-sample simulation · Monthly primary specification ·
-Data through 2023 · Educational prototype, not financial advice
-```
-
-Use a soft neutral surface with Ink text. This is a status statement, not a
-bright warning banner.
+Do not repeat a persistent simulation-status strip beneath every page heading.
+Historical status, data dates and educational limitations belong in the
+relevant chart/table context, methodology copy and application footer.
 
 ### Footer
 
@@ -329,8 +322,13 @@ Order:
 1. product proposition;
 2. how the systematic process works;
 3. equity, crypto, and combined family cards;
-4. what makes the evidence inspectable; and
-5. route to comparison.
+4. portfolio-method explanations;
+5. a `Build an allocation` introduction with three compact cards for weights,
+   combined exposure and historical outcomes, plus a route to Allocation Lab;
+6. a compact four-card row titled `What you can inspect`, covering performance
+   and risk, portfolio construction, implementation, and the news-signal
+   experiment; and
+7. route to comparison.
 
 Do not lead with a fictitious balance, best-return fund, or hero photograph.
 
@@ -344,7 +342,7 @@ Order:
 4. aligned comparison table; and
 5. definitions and limitations.
 
-- Allow up to four selected funds for focused comparison. Put Selected funds
+- Allow up to five selected funds for focused comparison. Put Selected funds
   and Benchmark first; place family and method filter pills in a secondary,
   clearly labelled filter panel below them.
 - Monthly funds appear by default.
@@ -443,6 +441,8 @@ Order:
 - Do not truncate a bar-value axis unless the break is explicit and justified.
 - Prefer direct labels. If a legend is necessary, keep its location consistent
   and outside the data region when possible.
+- Five-fund growth comparisons use five distinct categorical colours and a
+  reserved, wrapping legend band that cannot collide with the chart title.
 - Limit categorical colours to five or six.
 - Do not use three-dimensional charts, gauges, speedometers, radial meters,
   decorative donuts, or dual axes without an exceptional analytical reason.

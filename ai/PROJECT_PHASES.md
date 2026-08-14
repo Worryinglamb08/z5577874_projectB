@@ -680,7 +680,7 @@ communicates risk and signal confidence clearly.
   including adjusted SPY and ONEQ benchmark histories built outside the app.
   Missing files, empty files, schema changes, a non-15-fund menu, or a failed
   Phase 6 validation stop the app with a specific recovery instruction.
-- Comparison supports family/method filters and up to four selected funds, a
+- Comparison supports family/method filters and up to five selected funds, a
   dropdown for same-family Equal Weight, S&P 500 (SPY proxy), or Nasdaq
   Composite (ONEQ proxy), an aligned metric table, risk-return evidence, growth paths,
   definitions, and a filtered download. Higher-frequency experiments are
@@ -786,22 +786,24 @@ and the hand-in checker has no failures.
 
 ### Work
 
-- [x] Build Versions 2, 3, 4 and 5 as separate editable Word files under
+- [x] Build Versions 2, 3, 4, 5, 6 and 7 as separate editable Word files under
       `report/`; keep later revisions in their own files.
 - [ ] Export `report/report.pdf` only after the student approves the Word draft;
-      PDF creation remains deferred for Version 5.
+      PDF creation remains deferred for Version 7.
 - [ ] Keep narrative within the brief's approximately 5,000-word and 10-page
       limits, excluding appendices and references.
 - [x] Define equations, timing conventions, assumptions, constraints, and sample
       before interpreting results.
-- [x] Reference and interpret every required exhibit in the Version 5 draft.
+- [x] Reference and interpret every required exhibit in the Version 7 draft.
 - [x] Remove repeated in-image exhibit headings and retain one numbered Word
       caption below each appendix figure.
 - [x] Separate observed results, possible explanations, limitations, and
       recommendations.
 - [x] Include three specific real-world recommendations grounded in evidence.
-- [x] Verify every external source and citation used in Version 5.
-- [x] Reconcile all Version 5 report numbers and fund names to final artifacts.
+- [x] Verify every external source and citation used in Version 7.
+- [x] Reconcile all Version 7 report numbers and fund names to final artifacts.
+- [x] Revise Version 5 into Version 7 using the author's academic voice while
+      preserving all analytical content, tables, figures and conclusions.
 - [ ] Inspect every DOCX/PDF page for layout, caption, table, and figure issues.
 
 ### Completion gate

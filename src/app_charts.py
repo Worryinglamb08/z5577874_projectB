@@ -28,6 +28,13 @@ METHOD_COLORS = {
     "maximum_sharpe": "#CC79A7",
     "hierarchical_risk_parity": "#7C3AED",
 }
+COMPARISON_COLORS = (
+    ACCENT,
+    "#0072B2",
+    "#E69F00",
+    "#CC79A7",
+    "#7C3AED",
+)
 SECTOR_COLORS = {
     "Comm": "#56B4E9",
     "Consumer": "#E69F00",
@@ -152,7 +159,6 @@ def growth_figure(
 ) -> go.Figure:
     """Plot selected historical fund growth paths."""
     fig = go.Figure()
-    colors = [ACCENT, "#0072B2", "#E69F00", "#CC79A7"]
     for index, fund_id in enumerate(fund_ids):
         path = returns.loc[returns["fund_id"].eq(fund_id)].sort_values("date")
         method = methods[fund_id]
@@ -163,7 +169,7 @@ def growth_figure(
                 name=labels[fund_id],
                 mode="lines",
                 line={
-                    "color": colors[index % len(colors)],
+                    "color": COMPARISON_COLORS[index % len(COMPARISON_COLORS)],
                     "width": 2.5,
                     "dash": "dash" if method == "equal_weight" else "solid",
                 },
@@ -171,7 +177,24 @@ def growth_figure(
             )
         )
     fig.update_layout(title=title)
-    return _theme(fig, yaxis_title="Growth of $1 after trading costs", range_slider=True)
+    _theme(
+        fig,
+        yaxis_title="Growth of $1 after trading costs",
+        height=500,
+        range_slider=True,
+    )
+    fig.update_layout(
+        margin={"t": 126},
+        title={"y": 0.98, "yanchor": "top"},
+        legend={
+            "entrywidthmode": "fraction",
+            "entrywidth": 0.32,
+            "font": {"size": 11},
+            "y": 1.02,
+            "yanchor": "bottom",
+        },
+    )
+    return fig
 
 
 def benchmark_growth_figure(

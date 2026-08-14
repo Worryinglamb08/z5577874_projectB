@@ -10,11 +10,49 @@ from src.app_charts import (
     allocation_growth_figure,
     allocation_history_figure,
     fear_greed_figure,
+    growth_figure,
     holdings_figure,
     risk_return_figure,
     sector_allocation_figure,
 )
 from src.app_logic import AllocationBenchmarkEvidence
+
+
+def test_growth_figure_gives_five_funds_distinct_colours_and_header_space() -> None:
+    fund_ids = [f"fund_{index}" for index in range(5)]
+    dates = pd.to_datetime(["2023-11-01", "2023-12-01"])
+    returns = pd.DataFrame(
+        [
+            {
+                "date": date,
+                "fund_id": fund_id,
+                "growth_of_1_net": 1 + 0.01 * (index + date_index),
+            }
+            for index, fund_id in enumerate(fund_ids)
+            for date_index, date in enumerate(dates)
+        ]
+    )
+    labels = {
+        fund_id: f"Stockist comparison fund {index}"
+        for index, fund_id in enumerate(fund_ids)
+    }
+    methods = {fund_id: "minimum_variance" for fund_id in fund_ids}
+
+    figure = growth_figure(
+        returns,
+        fund_ids,
+        labels,
+        methods,
+        title="How did the selected funds compound?",
+    )
+
+    colours = [trace.line.color for trace in figure.data]
+    assert len(colours) == len(set(colours)) == 5
+    assert figure.layout.margin.t >= 120
+    assert figure.layout.height >= 500
+    assert figure.layout.title.y == pytest.approx(0.98)
+    assert figure.layout.legend.entrywidthmode == "fraction"
+    assert figure.layout.legend.entrywidth == pytest.approx(0.32)
 
 
 def test_risk_return_marker_shape_encodes_asset_family() -> None:

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Honest Project B Marker"
+  short_description: "Evidence-led Part B rubric marking"
+  default_prompt: "Use $mark-project-b to mark my current Project B honestly against the supplied brief."

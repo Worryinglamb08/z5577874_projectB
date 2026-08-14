@@ -152,12 +152,6 @@ def _css() -> None:
             color:var(--ink); letter-spacing:-0.015em;
         }
         p, label, [data-testid="stCaptionContainer"] { color:var(--secondary); }
-        .evidence-strip {
-            background:#E8F3F1; border:1px solid #B8D8D2;
-            border-left:4px solid var(--accent); border-radius:8px;
-            color:var(--ink); padding:0.76rem 0.95rem;
-            margin:0.5rem 0 1.5rem 0; font-size:0.91rem;
-        }
         .stockist-card { background:var(--surface); border:1px solid var(--rule);
             border-radius:9px; padding:1.05rem 1.1rem; min-height:168px; }
         .stockist-card h3 { font-size:1.05rem; margin:0 0 0.55rem 0; }
@@ -177,6 +171,15 @@ def _css() -> None:
         .method-card { grid-column:span 2; min-height:190px; box-sizing:border-box; }
         .method-card:nth-child(4) { grid-column:2 / span 2; }
         .method-card:nth-child(5) { grid-column:4 / span 2; }
+        .allocation-overview-grid { display:grid;
+            grid-template-columns:repeat(3,minmax(0,1fr));
+            gap:1rem; align-items:stretch; margin:0.75rem 0 0.8rem 0; }
+        .allocation-overview-card { min-height:132px; box-sizing:border-box; }
+        .allocation-overview-card p { margin-bottom:0; }
+        .inspect-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr));
+            gap:1rem; align-items:stretch; margin-bottom:1rem; }
+        .inspect-card { min-height:126px; box-sizing:border-box; }
+        .inspect-card p { margin-bottom:0; }
         @media (max-width:900px) {
             .step-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
             .family-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -186,6 +189,7 @@ def _css() -> None:
             .method-card, .method-card:nth-child(4) { grid-column:auto; min-height:170px; }
             .method-card:nth-child(5) { grid-column:1 / span 2;
                 width:calc(50% - 0.5rem); justify-self:center; min-height:170px; }
+            .inspect-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
         }
         @media (max-width:640px) {
             .step-grid { grid-template-columns:1fr; }
@@ -194,6 +198,10 @@ def _css() -> None:
             .method-grid { grid-template-columns:1fr; }
             .method-card, .method-card:nth-child(4), .method-card:nth-child(5) {
                 grid-column:auto; width:auto; min-height:0; }
+            .allocation-overview-grid { grid-template-columns:1fr; }
+            .allocation-overview-card { min-height:0; }
+            .inspect-grid { grid-template-columns:1fr; }
+            .inspect-card { min-height:0; }
         }
         .chip { display:inline-block; border:1px solid var(--rule); border-radius:999px;
             padding:0.18rem 0.52rem; margin:0 0.35rem 0.35rem 0;
@@ -244,22 +252,9 @@ def _css() -> None:
     )
 
 
-def _evidence_strip() -> None:
-    st.markdown(
-        """
-        <div class="evidence-strip">
-        Historical out-of-sample simulation · Monthly primary specification ·
-        Data through 2023 · Educational prototype, not financial advice
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
 def _page_header(title: str, purpose: str) -> None:
     st.title(title)
     st.markdown(f"<p style='font-size:1.08rem;color:#475569'>{purpose}</p>", unsafe_allow_html=True)
-    _evidence_strip()
 
 
 def _metric_row(metrics: list[tuple[str, str, str]]) -> None:
@@ -479,26 +474,73 @@ def _overview(artifacts: AppArtifacts, catalog: pd.DataFrame) -> None:
         unsafe_allow_html=True,
     )
 
-    st.subheader("What makes the evidence inspectable")
-    evidence_columns = st.columns(3)
-    evidence = (
+    st.subheader("Build an allocation")
+    st.markdown(
+        "Combine two to four Stockist funds into a hypothetical portfolio and see "
+        "how the allocation would have performed historically."
+    )
+    allocation_steps = (
         (
-            "Walk-forward evidence",
-            "Every simulated live return follows an estimation window ending before that return was earned.",
+            "Set fund weights",
+            "Adjust how much of the portfolio is allocated to each selected fund.",
         ),
         (
-            "Implementation costs",
-            "Primary fund returns include the approved 10 basis-point one-way turnover cost.",
+            "See the combined exposure",
+            "Inspect the underlying asset mix, overlap and concentration created by the allocation.",
         ),
         (
-            "News evidence quality",
-            "Coverage confidence distinguishes broad sector news from thin or concentrated evidence.",
+            "Measure the historical outcome",
+            "Compare return, volatility, Sharpe ratio, drawdown and the estimated product fee.",
         ),
     )
-    for column, (title, body) in zip(evidence_columns, evidence, strict=True):
-        with column.container(border=True):
-            st.markdown(f"**{title}**")
-            st.caption(body)
+    allocation_cards = "".join(
+        (
+            '<div class="stockist-card allocation-overview-card">'
+            f"<h3>{title}</h3>"
+            f"<p>{body}</p>"
+            "</div>"
+        )
+        for title, body in allocation_steps
+    )
+    st.markdown(
+        f'<div class="allocation-overview-grid">{allocation_cards}</div>',
+        unsafe_allow_html=True,
+    )
+    if st.button("Open allocation lab", key="overview_allocation_lab"):
+        _navigate("Allocation lab")
+
+    st.subheader("What you can inspect")
+    inspectable_evidence = (
+        (
+            "Performance &amp; risk",
+            "Returns, benchmarks, volatility and drawdowns.",
+        ),
+        (
+            "Portfolio construction",
+            "Holdings, target weights, sector exposures and concentration.",
+        ),
+        (
+            "Implementation",
+            "Turnover, trading-cost assumptions and rebalance changes.",
+        ),
+        (
+            "News signal experiment",
+            "Headline sentiment, coverage support and the measured effect of a coverage-aware sentiment tilt.",
+        ),
+    )
+    inspect_cards = "".join(
+        (
+            '<div class="stockist-card inspect-card">'
+            f"<h3>{title}</h3>"
+            f"<p>{body}</p>"
+            "</div>"
+        )
+        for title, body in inspectable_evidence
+    )
+    st.markdown(
+        f'<div class="inspect-grid">{inspect_cards}</div>',
+        unsafe_allow_html=True,
+    )
 
     st.markdown("The primary menu is deliberately not ranked by return.")
     if st.button(
@@ -518,7 +560,7 @@ def _overview(artifacts: AppArtifacts, catalog: pd.DataFrame) -> None:
 def _compare_funds(artifacts: AppArtifacts, catalog: pd.DataFrame) -> None:
     _page_header(
         "Compare monthly funds",
-        "Select up to four funds and compare return, risk, drawdown, implementation cost and benchmark evidence on aligned definitions.",
+        "Select up to five funds and compare return, risk, drawdown, implementation cost and benchmark evidence on aligned definitions.",
     )
     family_options = list(FAMILY_LABELS)
     method_options = list(METHOD_LABELS)
@@ -564,7 +606,7 @@ def _compare_funds(artifacts: AppArtifacts, catalog: pd.DataFrame) -> None:
         "Selected funds",
         available_funds,
         default=default_selection if selected_key not in st.session_state else None,
-        max_selections=4,
+        max_selections=5,
         format_func=labels.get,
         key=selected_key,
         help="These funds control the comparison table and charts below.",
